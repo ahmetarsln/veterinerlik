@@ -1,0 +1,5 @@
+D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.Entity\bin\Debug\murphy.vpo.Entity.dll
+D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.Entity\bin\Debug\murphy.vpo.Entity.pdb
+D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.Entity\obj\Debug\murphy.vpo.Entity.csproj.CoreCompileInputs.cache
+D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.Entity\obj\Debug\murphy.vpo.Entity.dll
+D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.Entity\obj\Debug\murphy.vpo.Entity.pdb
