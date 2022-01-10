@@ -1,2 +1,0 @@
-D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.Core\obj\Debug\murphy.vpo.Core.csproj.AssemblyReference.cache
-D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.Core\obj\Debug\murphy.vpo.Core.csproj.CoreCompileInputs.cache
