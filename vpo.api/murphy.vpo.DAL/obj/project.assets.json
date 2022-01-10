@@ -228,6 +228,32 @@
         "runtime": {
           "lib/netstandard2.0/System.Text.Encodings.Web.dll": {}
         }
+      },
+      "murphy.vpo.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.9"
+        },
+        "compile": {
+          "bin/placeholder/murphy.vpo.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/murphy.vpo.Core.dll": {}
+        }
+      },
+      "murphy.vpo.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "murphy.vpo.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/murphy.vpo.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/murphy.vpo.Entity.dll": {}
+        }
       }
     }
   },
@@ -693,6 +719,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "murphy.vpo.Core/1.0.0": {
+      "type": "project",
+      "path": "../murphy.vpo.Core/murphy.vpo.Core.csproj",
+      "msbuildProject": "../murphy.vpo.Core/murphy.vpo.Core.csproj"
+    },
+    "murphy.vpo.Entity/1.0.0": {
+      "type": "project",
+      "path": "../murphy.vpo.Entity/murphy.vpo.Entity.csproj",
+      "msbuildProject": "../murphy.vpo.Entity/murphy.vpo.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -700,7 +736,8 @@
       "Microsoft.AspNetCore.Http.Abstractions >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.9",
-      "Newtonsoft.Json >= 13.0.1"
+      "Newtonsoft.Json >= 13.0.1",
+      "murphy.vpo.Entity >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -733,7 +770,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\VeterinerOtomasyon\\veteriner_poliklinik_otomasyonu\\vpo.api\\murphy.vpo.Entity\\murphy.vpo.Entity.csproj": {
+              "projectPath": "D:\\VeterinerOtomasyon\\veteriner_poliklinik_otomasyonu\\vpo.api\\murphy.vpo.Entity\\murphy.vpo.Entity.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
