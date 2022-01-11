@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace murphy.vpo.Core.Entities
 {
-    interface ISoftDeletable
+    public interface ISoftDeletable
     {
     }
 }

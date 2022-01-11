@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace murphy.vpo.Core.Entities
 {
-    interface ITrackable
+    public interface ITrackable
     {
+        string CreatedBy { set; get; }
+        DateTime CreatedAt { get; set; }
+        string ModifiedBy { set; get; }
+        DateTime ModifiedAt { get; set; }
     }
 }

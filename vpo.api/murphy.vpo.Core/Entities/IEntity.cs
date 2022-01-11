@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace murphy.vpo.Core.Entities
 {
-    interface IEntity
+    public interface IEntity
     {
+        int Id { set; get; }
     }
 }

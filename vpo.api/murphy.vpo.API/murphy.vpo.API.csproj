@@ -21,4 +21,11 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.15.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\murphy.vpo.BAL\murphy.vpo.BAL.csproj" />
+    <ProjectReference Include="..\murphy.vpo.Core\murphy.vpo.Core.csproj" />
+    <ProjectReference Include="..\murphy.vpo.DAL\murphy.vpo.DAL.csproj" />
+    <ProjectReference Include="..\murphy.vpo.Entity\murphy.vpo.Entity.csproj" />
+  </ItemGroup>
+
 </Project>
