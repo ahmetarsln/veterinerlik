@@ -12,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using murphy.vpo.DAL.Concrete.Helpers;
 using murphy.vpo.Entity.Helpers;
+using murphy.vpo.Entity.Concrete;
 
 namespace murphy.vpo.DAL.Concrete.EntityFramework
 {
@@ -19,6 +20,7 @@ namespace murphy.vpo.DAL.Concrete.EntityFramework
     {
 
         public DbSet<Audit> Audits { get; set; }
+        public DbSet<User> Users { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
         public VpoDbContext(DbContextOptions<VpoDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
