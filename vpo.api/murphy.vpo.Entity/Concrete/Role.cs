@@ -1,4 +1,5 @@
-﻿using System;
+﻿using murphy.vpo.Core.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace murphy.vpo.Entity.Concrete
 {
-    public class Role
+    public class Role : IEntity, ITrackable, ISoftDeletable
     {
         public int Id { get; set; }
         public String Name { get; set; }
