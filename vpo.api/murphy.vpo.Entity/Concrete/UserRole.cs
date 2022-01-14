@@ -15,5 +15,7 @@ namespace murphy.vpo.Entity.Concrete
         public DateTime CreatedAt { get; set; }
         public string ModifiedBy { get; set; }
         public DateTime ModifiedAt { get; set; }
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
     }
 }
