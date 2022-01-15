@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace murphy.vpo.BAL.Concrete
 {
-    class UserRoleManager : IUserRoleService
+    public class UserRoleManager : IUserRoleService
     {
         private readonly IUserRoleDal _userRoleDal;
         public UserRoleManager(IUserRoleDal userRoleDal)
