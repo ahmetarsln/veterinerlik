@@ -10,6 +10,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using murphy.vpo.BAL.Abstract;
+using murphy.vpo.BAL.Concrete;
+using murphy.vpo.Core.DataAccess;
+using murphy.vpo.Core.DataAccess.EntityFramework;
+using murphy.vpo.DAL.Abstract;
 using murphy.vpo.DAL.Concrete.EntityFramework;
 using System.Reflection;
 using System.Text;
@@ -41,7 +46,7 @@ namespace murphy.vpo.API
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Murphy.vpo.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "murphy.vpo.API", Version = "v1" });
             });
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -49,8 +54,46 @@ namespace murphy.vpo.API
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddDbContext<VpoDbContext>(option =>
-            option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("Murphy.vpo.API")));
+            option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("murphy.vpo.API")));
 
+            services.AddScoped(typeof(IEntityRepository<>), typeof(EfEntityRepositoryBase<>));
+
+            services.AddScoped<IUserDal, EfUserDal>();
+            services.AddScoped<IUserService, UserManager>();
+            services.AddScoped<IRoleDal, EfRoleDal>();
+            services.AddScoped<IRoleService, RoleManager>();
+            services.AddScoped<IAuthService, AuthManager>();
+            services.AddScoped<IUserRoleService, UserRoleManager>();
+            services.AddScoped<IUserRoleDal, EfUserRoleDal>();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII
+                            .GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+                    };
+                });
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("RequireAdminRole", policy => policy.RequireRole("Admin"));
+                options.AddPolicy("RequireModerateRole", policy => policy.RequireRole("Admin", "Moderator"));
+            });
+
+            services.AddCors();
+
+
+            services.AddMvc(options =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                    .RequireAuthenticatedUser()
+                    .Build();
+                options.Filters.Add(new AuthorizeFilter(policy));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
