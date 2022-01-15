@@ -4,8 +4,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
-using murphy.vpo.Core.Entities;
 using Microsoft.EntityFrameworkCore;
+using murphy.vpo.Core.Entities;
+
 
 namespace murphy.vpo.Core.DataAccess.EntityFramework
 {
@@ -19,7 +20,6 @@ namespace murphy.vpo.Core.DataAccess.EntityFramework
             Context = context;
         }
 
-        //Internally re-usable DbSet instance.
         protected DbSet<TEntity> DbSet
         {
             get
@@ -114,7 +114,7 @@ namespace murphy.vpo.Core.DataAccess.EntityFramework
             var entry = Context.Entry(entity);
             this.DbSet.Attach(entity);
             entry.State = EntityState.Modified;
-            entry.Property(p => p.CreatedDate).IsModified = false;
+            entry.Property(p => p.CreatedAt).IsModified = false;
             entry.Property(p => p.CreatedBy).IsModified = false;
             if (saveChanges)
             {
@@ -130,7 +130,7 @@ namespace murphy.vpo.Core.DataAccess.EntityFramework
             if (exist != null)
             {
                 Context.Entry(exist).CurrentValues.SetValues(entity);
-                Context.Entry(exist).Property(x => x.CreatedDate).IsModified = false;
+                Context.Entry(exist).Property(x => x.CreatedAt).IsModified = false;
                 Context.Entry(exist).Property(x => x.CreatedBy).IsModified = false;
                 if (saveChanges)
                 {
@@ -206,7 +206,7 @@ namespace murphy.vpo.Core.DataAccess.EntityFramework
             var entry = Context.Entry(entity);
             this.DbSet.Attach(entity);
             entry.State = EntityState.Modified;
-            entry.Property(p => p.CreatedDate).IsModified = false;
+            entry.Property(p => p.CreatedAt).IsModified = false;
             entry.Property(p => p.CreatedBy).IsModified = false;
             if (saveChanges)
             {
@@ -222,7 +222,7 @@ namespace murphy.vpo.Core.DataAccess.EntityFramework
             if (exist != null)
             {
                 Context.Entry(exist).CurrentValues.SetValues(entity);
-                Context.Entry(exist).Property(x => x.CreatedDate).IsModified = false;
+                Context.Entry(exist).Property(x => x.CreatedAt).IsModified = false;
                 Context.Entry(exist).Property(x => x.CreatedBy).IsModified = false;
                 if (saveChanges)
                 {

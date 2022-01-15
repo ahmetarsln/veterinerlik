@@ -8,6 +8,6 @@ namespace murphy.vpo.Core.Entities
 {
     public interface IEntity
     {
-        int Id { get; set; }
+        int Id { set; get; }
     }
 }

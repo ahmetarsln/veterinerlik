@@ -1,5 +1,0 @@
-D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.BAL\bin\Debug\murphy.vpo.BAL.dll
-D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.BAL\bin\Debug\murphy.vpo.BAL.pdb
-D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.BAL\obj\Debug\Murphy.vpo.BAL.csproj.CoreCompileInputs.cache
-D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.BAL\obj\Debug\murphy.vpo.BAL.dll
-D:\dev\projects\veteriner_poliklinik_otomasyonu\vpo.api\murphy.vpo.BAL\obj\Debug\murphy.vpo.BAL.pdb

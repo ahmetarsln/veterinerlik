@@ -10,6 +10,7 @@ namespace murphy.vpo.Core.DataAccess
 {
     public interface IEntityRepository<TEntity> where TEntity : class, IEntity
     {
+
         IList<TEntity> GetAll();
         IList<TEntity> GetAllMatched(Expression<Func<TEntity, bool>> match);
         IQueryable<TEntity> GetAllIncluding(params Expression<Func<TEntity, object>>[] includeProperties);
