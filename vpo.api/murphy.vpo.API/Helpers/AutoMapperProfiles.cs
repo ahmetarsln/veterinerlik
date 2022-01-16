@@ -18,6 +18,7 @@ namespace murphy.vpo.API.Helpers
         CreateMap<User, UserTokenDto>().ReverseMap();
 
         CreateMap<UserRole, UserRoleDto>().ReverseMap();
-    }
+        CreateMap<Pet, PetDto>().ReverseMap();
+        }
     }
 }
