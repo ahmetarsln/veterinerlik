@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace murphy.vpo.Entity.Concrete
 {
-    internal class Appointment : IEntity, ITrackable, ISoftDeletable
+    public class Appointment : IEntity, ITrackable, ISoftDeletable
     {
         public int Id { get ; set ; }
 
