@@ -8,9 +8,9 @@ namespace murphy.vpo.Core.Entities
 {
     public interface ITrackable
     {
-        string CreatedBy { get; set; }
-        DateTime CreatedDate { get; set; }  
-        string  ModifiedBy { get; set; }    
-        DateTime ModifiedDate { get; set; }
+        string CreatedBy { set; get; }
+        DateTime CreatedAt { get; set; }
+        string ModifiedBy { set; get; }
+        DateTime ModifiedAt { get; set; }
     }
 }
