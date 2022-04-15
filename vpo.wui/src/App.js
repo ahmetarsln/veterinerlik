@@ -18,6 +18,11 @@ import RoleList from "./components/Roles/RoleList";
 import RoleEdit from "./components/Roles/RoleEdit";
 import RoleNew from "./components/Roles/RoleNew";
 import RoleDelete from "./components/Roles/RoleDelete";
+//Pet
+import PetList from "./components/Pets/PetList";
+import PetEdit from "./components/Pets/PetEdit";
+import PetNew from "./components/Pets/PetNew";
+import PetDelete from "./components/Pets/PetDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -47,6 +52,10 @@ class App extends PureComponent{
                 <SecureRoute exact path="/roles-edit/:id" component={RoleEdit} />
                 <SecureRoute exact path="/roles-delete/:id" component={RoleDelete} />
                 <SecureRoute exact path="/roles-new" component={RoleNew} />
+                <SecureRoute exact path="/pets-list" component={PetList} />
+                <SecureRoute exact path="/pets-edit/:id" component={PetEdit}/>
+                <SecureRoute exact path="/pets-delete/:id" component={PetDelete}/>
+                <SecureRoute exact path="/pets-new" component={PetNew} />
                 </Switch>
               </Router>
             </ModalManager>
