@@ -8,8 +8,7 @@ using murphy.vpo.Entity.Concrete;
 
 namespace murphy.vpo.DAL.Abstract
 {
-    public interface ICustomerDal : IEntityRepository<Pet>
+    public interface ICustomerDal : IEntityRepository<Customer>
     {
-        Task AddAsync(Customer customer, bool v);
     }
 }
