@@ -7,7 +7,6 @@ import NavMenu from "./components/Layout/Nav/NavMenu";
 import SecureRoute from "./libs/SecureRoute";
 //HomePage
 import HomePage from "./components/Home/HomePage";
-
 //User
 import UserList from "./components/Users/UserList";
 import UserEdit from "./components/Users/UserEdit";
@@ -23,6 +22,11 @@ import PetList from "./components/Pets/PetList";
 import PetEdit from "./components/Pets/PetEdit";
 import PetNew from "./components/Pets/PetNew";
 import PetDelete from "./components/Pets/PetDelete";
+//Product
+import ProductList from "./components/Products/ProductList";
+import ProductEdit from "./components/Products/ProductEdit";
+import ProductNew from "./components/Products/ProductNew";
+import ProductDelete from "./components/Products/ProductDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -56,6 +60,10 @@ class App extends PureComponent{
                 <SecureRoute exact path="/pets-edit/:id" component={PetEdit}/>
                 <SecureRoute exact path="/pets-delete/:id" component={PetDelete}/>
                 <SecureRoute exact path="/pets-new" component={PetNew} />
+                <SecureRoute exact path="/products-list" component={ProductList} />
+                <SecureRoute exact path="/products-edit/:id" component={ProductEdit}/>
+                <SecureRoute exact path="/products-delete/:id" component={ProductDelete}/>
+                <SecureRoute exact path="/products-new" component={ProductNew} />
                 </Switch>
               </Router>
             </ModalManager>
