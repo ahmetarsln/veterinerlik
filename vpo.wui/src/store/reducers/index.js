@@ -4,6 +4,7 @@ import roleReducer from "./roleReducer";
 import securityReducer from "./securityReducer";
 import modalReducer from "./modalReducer";
 import petReducer from "./petReducer";
+import productReducer from "./productReducer";
 
 const rootReducer = combineReducers({
     userReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     securityReducer,
     modalReducer,
     petReducer,
+    productReducer,
     
   });
   
