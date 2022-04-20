@@ -18,6 +18,11 @@ import RoleList from "./components/Roles/RoleList";
 import RoleEdit from "./components/Roles/RoleEdit";
 import RoleNew from "./components/Roles/RoleNew";
 import RoleDelete from "./components/Roles/RoleDelete";
+//Customer
+import CustomerList from "./components/Customers/CustomerList";
+import CustomerEdit from "./components/Customers/CustomerEdit";
+import CustomerNew from "./components/Customers/CustomerNew";
+import CustomerDelete from "./components/Customers/CustomerDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -47,6 +52,11 @@ class App extends PureComponent{
                 <SecureRoute exact path="/roles-edit/:id" component={RoleEdit} />
                 <SecureRoute exact path="/roles-delete/:id" component={RoleDelete} />
                 <SecureRoute exact path="/roles-new" component={RoleNew} />
+                <SecureRoute exact path="/customers-list" component={CustomerList} />
+                <SecureRoute exact path="/customers-edit/:id" component={CustomerEdit} />
+                <SecureRoute exact path="/customers-delete/:id" component={CustomerDelete} />
+                <SecureRoute exact path="/customers-new" component={CustomerNew} />
+
                 </Switch>
               </Router>
             </ModalManager>
