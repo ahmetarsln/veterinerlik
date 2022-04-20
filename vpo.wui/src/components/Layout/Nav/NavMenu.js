@@ -12,7 +12,7 @@ const NavMenu = () => {
           <Nav className="me-auto">
             <Nav.Link href="/users-list">Kullanıcılar</Nav.Link>
             <Nav.Link href="/roles-list">Roller</Nav.Link>
-            
+            <Nav.Link href="/customers-list">Müşteriler</Nav.Link>
 
 
             <Nav.Link
