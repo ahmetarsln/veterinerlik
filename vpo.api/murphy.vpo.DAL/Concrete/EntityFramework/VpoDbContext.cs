@@ -26,7 +26,7 @@ namespace murphy.vpo.DAL.Concrete.EntityFramework
 
         public DbSet<Pet> Pets { get; set; }
         public DbSet<Product> Products { get; set; }
-        public DbSet<ProductCategory> ProductCategorys { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
         public VpoDbContext(DbContextOptions<VpoDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
