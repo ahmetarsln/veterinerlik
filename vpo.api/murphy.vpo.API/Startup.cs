@@ -69,6 +69,9 @@ namespace murphy.vpo.API
             services.AddScoped<IPetService, PetManager>();
             services.AddScoped<ICustomerDal, EfCustomerDal>();
             services.AddScoped<ICustomerService, CustomerManager>();
+            services.AddScoped<ISupplierDal, EfSupplierDal>();
+            services.AddScoped<ISupplierService, SupplierManager>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
