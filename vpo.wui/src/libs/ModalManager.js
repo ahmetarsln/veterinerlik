@@ -11,6 +11,9 @@ import PetDeleteModal from "../components/Pets/PetModals/PetDeleteModal";
 import ProductNewModal from "../components/Products/ProductModals/ProductNewModal";
 import ProductEditModal from "../components/Products/ProductModals/ProductEditModal";
 import ProductDeleteModal from "../components/Products/ProductModals/ProductDeleteModal";
+import ProductCategoryNewModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryNewModal";
+import ProductCategoryEditModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryEditModal";
+import ProductCategoryDeleteModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryDeleteModal";
 const ModalManager = () => {
   const modalLookup = {
     UserNewModal,
@@ -23,7 +26,11 @@ const ModalManager = () => {
     PetDeleteModal,
     ProductNewModal,
     ProductEditModal,
-    ProductDeleteModal
+    ProductDeleteModal,
+    ProductCategoryNewModal,
+    ProductCategoryEditModal,
+    ProductCategoryDeleteModal,
+    
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;
