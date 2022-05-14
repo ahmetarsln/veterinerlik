@@ -4,6 +4,7 @@ import roleReducer from "./roleReducer";
 import securityReducer from "./securityReducer";
 import modalReducer from "./modalReducer";
 import customerReducer from "./customerReducer";
+import supplierReducer from "./supplierReducer";
 
 const rootReducer = combineReducers({
     userReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
     securityReducer,
     modalReducer,
     customerReducer,
+    supplierReducer,
 
   });
   
