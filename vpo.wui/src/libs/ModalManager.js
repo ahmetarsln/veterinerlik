@@ -8,6 +8,9 @@ import RoleDeleteModal from "../components/Roles/RoleModals/RoleDeleteModal";
 import CustomerNewModal from "../components/Customers/CustomerModals/CustomerNewModal";
 import CustomerEditModal from "../components/Customers/CustomerModals/CustomerEditModal";
 import CustomerDeleteModal from "../components/Customers/CustomerModals/CustomerDeleteModal";
+import SupplierNewModal from "../components/Suppliers/SupplierModals/SupplierNewModal";
+import SupplierEditModal from "../components/Suppliers/SupplierModals/SupplierEditModal";
+import SupplierDeleteModal from "../components/Suppliers/SupplierModals/SupplierDeleteModal";
 
 const ModalManager = () => {
   const modalLookup = {
@@ -19,6 +22,9 @@ const ModalManager = () => {
     CustomerNewModal,
     CustomerEditModal,
     CustomerDeleteModal,
+    SupplierNewModal,
+    SupplierEditModal,
+    SupplierDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;
