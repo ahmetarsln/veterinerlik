@@ -13,6 +13,7 @@ const NavMenu = () => {
             <Nav.Link href="/users-list">Kullanıcılar</Nav.Link>
             <Nav.Link href="/roles-list">Roller</Nav.Link>
             <Nav.Link href="/customers-list">Müşteriler</Nav.Link>
+            <Nav.Link href="/suppliers-list">Firmalar</Nav.Link>
 
 
             <Nav.Link
