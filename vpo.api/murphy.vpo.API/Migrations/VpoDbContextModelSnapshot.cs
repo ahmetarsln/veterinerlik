@@ -19,6 +19,45 @@ namespace murphy.vpo.API.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("murphy.vpo.Entity.Concrete.CurrencyUnit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CurrencyUnitActivityStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CurrencyUnitCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CurrencyUnitName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CurrencyUnitRate")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CurrencyUnits");
+                });
+
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Pet", b =>
                 {
                     b.Property<int>("Id")
@@ -133,7 +172,7 @@ namespace murphy.vpo.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ProductCategorys");
+                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Role", b =>
