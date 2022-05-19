@@ -73,6 +73,8 @@ namespace murphy.vpo.API
 
             services.AddScoped<IProductCategoryDal, EfProductCategoryDal>();
             services.AddScoped<IProductCategoryService, ProductCategoryManager>();
+            services.AddScoped<ICurrencyUnitDal, EfCurrencyUnitDal>();
+            services.AddScoped<ICurrencyUnitService, CurrencyUnitManager > ();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
