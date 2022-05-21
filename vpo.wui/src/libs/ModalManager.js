@@ -14,6 +14,9 @@ import ProductDeleteModal from "../components/Products/ProductModals/ProductDele
 import ProductCategoryNewModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryNewModal";
 import ProductCategoryEditModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryEditModal";
 import ProductCategoryDeleteModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryDeleteModal";
+import CurrencyUnitNewModal from "../components/CurrencyUnits/CurrencyUnitModals/CurrencyUnitNewModal";
+import CurrencyUnitEditModal from "../components/CurrencyUnits/CurrencyUnitModals/CurrencyUnitEditModal";
+import CurrencyUnitDeleteModal from "../components/CurrencyUnits/CurrencyUnitModals/CurrencyUnitDeleteModal";
 const ModalManager = () => {
   const modalLookup = {
     UserNewModal,
@@ -30,6 +33,9 @@ const ModalManager = () => {
     ProductCategoryNewModal,
     ProductCategoryEditModal,
     ProductCategoryDeleteModal,
+    CurrencyUnitNewModal,
+    CurrencyUnitEditModal,
+    CurrencyUnitDeleteModal
     
   };
   const currentModal = useSelector((state) => state.modalReducer);
