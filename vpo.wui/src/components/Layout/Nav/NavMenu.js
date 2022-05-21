@@ -14,8 +14,8 @@ const NavMenu = () => {
             <Nav.Link href="/roles-list">Roller</Nav.Link>
             <Nav.Link href="/pets-list">Evcil Hayvanlar</Nav.Link>
             <Nav.Link href="/products-list">Ürünler</Nav.Link>
-            <Nav.Link href="/productCategories-list">Ürün Kategorileri </Nav.Link>
-
+            <Nav.Link href="/productCategories-list">Ürün Kategorileri</Nav.Link>
+            <Nav.Link href="/currencyUnits-list">Para Birimleri</Nav.Link>
 
             <Nav.Link
               href="/login"
