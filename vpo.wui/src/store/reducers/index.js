@@ -6,6 +6,7 @@ import modalReducer from "./modalReducer";
 import petReducer from "./petReducer";
 import productReducer from "./productReducer";
 import productCategoryReducer from "./productCategoryReducer";
+import currencyUnitReducer from "./currencyUnitReducer";
 
 const rootReducer = combineReducers({
     userReducer,
@@ -14,7 +15,8 @@ const rootReducer = combineReducers({
     modalReducer,
     petReducer,
     productReducer,
-    productCategoryReducer
+    productCategoryReducer,
+    currencyUnitReducer
     
   });
   
