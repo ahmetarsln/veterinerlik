@@ -26,6 +26,7 @@ namespace murphy.vpo.DAL.Concrete.EntityFramework
         public DbSet<Appointment> Appointments { get; set; }
 
         public DbSet<Pet> Pets { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
         public VpoDbContext(DbContextOptions<VpoDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
