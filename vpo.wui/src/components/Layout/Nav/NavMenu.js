@@ -15,6 +15,7 @@ const NavMenu = () => {
             <Nav.Link href="/pets-list">Evcil Hayvanlar</Nav.Link>
             <Nav.Link href="/products-list">Ürünler</Nav.Link>
             <Nav.Link href="/customers-list">Müşteriler</Nav.Link>
+            <Nav.Link href="/suppliers-list">Firmalar</Nav.Link>
             <Nav.Link
               href="/login"
               onClick={() => {

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using murphy.vpo.DAL.Concrete.EntityFramework;
 
 namespace murphy.vpo.API.Migrations
 {
     [DbContext(typeof(VpoDbContext))]
-    partial class VpoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220511191234_Supplier added")]
+    partial class Supplieradded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -101,51 +103,6 @@ namespace murphy.vpo.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Pets");
-                });
-
-            modelBuilder.Entity("murphy.vpo.Entity.Concrete.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductCategory")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductImage")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductPurchasePrice")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductSalesPrice")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductTaxRate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Role", b =>

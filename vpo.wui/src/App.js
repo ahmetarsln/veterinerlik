@@ -34,6 +34,12 @@ import CustomerEdit from "./components/Customers/CustomerEdit";
 import CustomerNew from "./components/Customers/CustomerNew";
 import CustomerDelete from "./components/Customers/CustomerDelete";
 
+//Supplier
+import SupplierList from "./components/Suppliers/SupplierList";
+import SupplierEdit from "./components/Suppliers/SupplierEdit";
+import SupplierNew from "./components/Suppliers/SupplierNew";
+import SupplierDelete from "./components/Suppliers/SupplierDelete";
+
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -75,6 +81,10 @@ class App extends PureComponent{
                 <SecureRoute exact path="/customers-edit/:id" component={CustomerEdit} />
                 <SecureRoute exact path="/customers-delete/:id" component={CustomerDelete} />
                 <SecureRoute exact path="/customers-new" component={CustomerNew} />
+                <SecureRoute exact path="/suppliers-list" component={SupplierList} />
+                <SecureRoute exact path="/suppliers-edit/:id" component={SupplierEdit} />
+                <SecureRoute exact path="/suppliers-delete/:id" component={SupplierDelete} />
+                <SecureRoute exact path="/suppliers-new" component={SupplierNew} />
 
 
                 </Switch>
