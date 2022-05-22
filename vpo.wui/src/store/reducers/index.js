@@ -8,6 +8,7 @@ import petReducer from "./petReducer";
 import productReducer from "./productReducer";
 import customerReducer from "./customerReducer";
 import supplierReducer from "./supplierReducer";
+import productCategoryReducer from "./productCategoryReducer";
 
 const rootReducer = combineReducers({
     userReducer,
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
     productReducer,
     customerReducer,
     supplierReducer,
+    productCategoryReducer,
   });
   
   export default rootReducer;

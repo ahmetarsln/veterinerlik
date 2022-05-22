@@ -17,8 +17,9 @@ import CustomerDeleteModal from "../components/Customers/CustomerModals/Customer
 import SupplierNewModal from "../components/Suppliers/SupplierModals/SupplierNewModal";
 import SupplierEditModal from "../components/Suppliers/SupplierModals/SupplierEditModal";
 import SupplierDeleteModal from "../components/Suppliers/SupplierModals/SupplierDeleteModal";
-
-
+import ProductCategoryNewModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryNewModal";
+import ProductCategoryEditModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryEditModal";
+import ProductCategoryDeleteModal from "../components/ProductCategories/ProductCategoryModals/ProductCategoryDeleteModal";
 const ModalManager = () => {
   const modalLookup = {
     UserNewModal,
@@ -38,6 +39,9 @@ const ModalManager = () => {
     SupplierNewModal,
     SupplierEditModal,
     SupplierDeleteModal,
+    ProductCategoryNewModal,
+    ProductCategoryEditModal,
+    ProductCategoryDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;
