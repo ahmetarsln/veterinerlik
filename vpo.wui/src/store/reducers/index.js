@@ -3,12 +3,14 @@ import userReducer from "./userReducer";
 import roleReducer from "./roleReducer";
 import securityReducer from "./securityReducer";
 import modalReducer from "./modalReducer";
+import appointmentReducer from "./appointmentReducer";
 
 const rootReducer = combineReducers({
     userReducer,
     roleReducer,
     securityReducer,
     modalReducer,
+    appointmentReducer
     
   });
   
