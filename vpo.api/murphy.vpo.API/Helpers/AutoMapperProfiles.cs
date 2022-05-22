@@ -16,13 +16,13 @@ namespace murphy.vpo.API.Helpers
         CreateMap<User, UserRegisterDto>().ReverseMap();
         CreateMap<User, UserLoginDto>().ReverseMap();
         CreateMap<User, UserTokenDto>().ReverseMap();
-
         CreateMap<UserRole, UserRoleDto>().ReverseMap();
         CreateMap<Pet, PetDto>().ReverseMap();
         CreateMap<Appointment, AppointmentDto>().ReverseMap();
         CreateMap<Customer, CustomerDto>().ReverseMap();
         CreateMap<Product, ProductDto>().ReverseMap();
         CreateMap<Supplier, SupplierDto>().ReverseMap();
+        CreateMap<ProductCategory, ProductCategoryDto>().ReverseMap();
         }
     }
 }
