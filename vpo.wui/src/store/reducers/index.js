@@ -6,6 +6,7 @@ import modalReducer from "./modalReducer";
 import appointmentReducer from "./appointmentReducer";
 import petReducer from "./petReducer";
 import productReducer from "./productReducer";
+import customerReducer from "./customerReducer";
 
 const rootReducer = combineReducers({
     userReducer,
@@ -15,7 +16,7 @@ const rootReducer = combineReducers({
     appointmentReducer,
     petReducer,
     productReducer,
-    
+    customerReducer,
   });
   
   export default rootReducer;
