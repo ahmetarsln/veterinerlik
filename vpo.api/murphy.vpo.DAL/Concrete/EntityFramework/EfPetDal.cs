@@ -13,9 +13,9 @@ namespace murphy.vpo.DAL.Concrete.EntityFramework
     public class EfPetDal : EfEntityRepositoryBase<Pet>, IPetDal
     {
         private VpoDbContext _vpoDbContext;
-        public EfPetDal(VpoDbContext tuberDbContext) : base(tuberDbContext)
+        public EfPetDal(VpoDbContext vpoDbContext) : base(vpoDbContext)
         {
-            _vpoDbContext = tuberDbContext;
+            _vpoDbContext = vpoDbContext;
         }
     }
 }
