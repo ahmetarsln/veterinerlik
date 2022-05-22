@@ -5,6 +5,7 @@ import securityReducer from "./securityReducer";
 import modalReducer from "./modalReducer";
 import appointmentReducer from "./appointmentReducer";
 import petReducer from "./petReducer";
+import productReducer from "./productReducer";
 
 const rootReducer = combineReducers({
     userReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
     modalReducer,
     appointmentReducer,
     petReducer,
+    productReducer,
     
   });
   
