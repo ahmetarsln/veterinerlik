@@ -14,6 +14,7 @@ const NavMenu = () => {
             <Nav.Link href="/roles-list">Roller</Nav.Link>
             <Nav.Link href="/customers-list">Müşteriler</Nav.Link>
             <Nav.Link href="/suppliers-list">Firmalar</Nav.Link>
+            <Nav.Link href="/payments-list">Ödemeler</Nav.Link>
 
 
             <Nav.Link
