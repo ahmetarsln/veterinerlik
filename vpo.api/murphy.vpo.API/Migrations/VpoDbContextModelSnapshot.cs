@@ -58,6 +58,42 @@ namespace murphy.vpo.API.Migrations
                     b.ToTable("CurrencyUnits");
                 });
 
+            modelBuilder.Entity("murphy.vpo.Entity.Concrete.MeasurementUnit", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MeasurementUnitDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MeasurementUnitName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UnitOfMeasureValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MeasurementUnits");
+                });
+
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Pet", b =>
                 {
                     b.Property<int>("Id")
