@@ -22,6 +22,7 @@ namespace murphy.vpo.API.Helpers
         CreateMap<Product, ProductDto>().ReverseMap();
         CreateMap<ProductCategory, ProductCategoryDto>().ReverseMap();
         CreateMap<CurrencyUnit, CurrencyUnitDto>().ReverseMap();
+        CreateMap<MeasurementUnit, MeasurementUnitDto>().ReverseMap();
         }
     }
 }
