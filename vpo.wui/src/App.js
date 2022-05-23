@@ -46,6 +46,13 @@ import ProductCategoryEdit from "./components/ProductCategories/ProductCategoryE
 import ProductCategoryNew from "./components/ProductCategories/ProductCategoryNew";
 import ProductCategoryDelete from "./components/ProductCategories/ProductCategoryDelete";
 
+
+//CurrencyUnit
+import CurrencyUnitList from "./components/CurrencyUnits/CurrencyUnitList";
+import CurrencyUnitEdit from "./components/CurrencyUnits/CurrencyUnitEdit";
+import CurrencyUnitNew from "./components/CurrencyUnits/CurrencyUnitNew";
+import CurrencyUnitDelete from "./components/CurrencyUnits/CurrencyUnitDelete";
+
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -95,6 +102,10 @@ class App extends PureComponent{
                 <SecureRoute exact path="/productCategories-edit/:id" component={ProductCategoryEdit}/>
                 <SecureRoute exact path="/productCategories-delete/:id" component={ProductCategoryDelete}/>
                 <SecureRoute exact path="/productCategories-new" component={ProductCategoryNew} />
+                <SecureRoute exact path="/currencyUnits-list" component={CurrencyUnitList} />
+                <SecureRoute exact path="/currencyUnits-edit/:id" component={CurrencyUnitEdit}/>
+                <SecureRoute exact path="/currencyUnits-delete/:id" component={CurrencyUnitDelete}/>
+                <SecureRoute exact path="/currencyUnits-new" component={CurrencyUnitNew} />
                 </Switch>
               </Router>
             </ModalManager>

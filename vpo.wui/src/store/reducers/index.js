@@ -9,6 +9,7 @@ import productReducer from "./productReducer";
 import customerReducer from "./customerReducer";
 import supplierReducer from "./supplierReducer";
 import productCategoryReducer from "./productCategoryReducer";
+import currencyUnitReducer from "./currencyUnitReducer";
 
 const rootReducer = combineReducers({
     userReducer,
@@ -21,6 +22,8 @@ const rootReducer = combineReducers({
     customerReducer,
     supplierReducer,
     productCategoryReducer,
+    productCategoryReducer,
+    currencyUnitReducer,
   });
   
   export default rootReducer;
