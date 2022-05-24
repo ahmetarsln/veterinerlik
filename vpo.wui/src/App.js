@@ -53,6 +53,11 @@ import CurrencyUnitEdit from "./components/CurrencyUnits/CurrencyUnitEdit";
 import CurrencyUnitNew from "./components/CurrencyUnits/CurrencyUnitNew";
 import CurrencyUnitDelete from "./components/CurrencyUnits/CurrencyUnitDelete";
 
+//Payment
+import PaymentList from "./components/Payments/PaymentList";
+import PaymentEdit from "./components/Payments/PaymentEdit";
+import PaymentNew from "./components/Payments/PaymentNew";
+import PaymentDelete from "./components/Payments/PaymentDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -61,17 +66,17 @@ import Register from "./components/Auth/Register";
 
 import configureStore from "./store/reducers/configureStore";
 const store = configureStore();
-class App extends PureComponent{
-  render(){
-    return(
+class App extends PureComponent {
+  render() {
+    return (
       <>
-      <NavMenu/>
+        <NavMenu />
         <Layout>
           <Provider store={store}>
             <ModalManager>
               <Router>
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
                 <Switch>
                 <SecureRoute exact path="/" component={HomePage} />
                 <SecureRoute exact path="/users-list" component={UserList} />
@@ -106,12 +111,34 @@ class App extends PureComponent{
                 <SecureRoute exact path="/currencyUnits-edit/:id" component={CurrencyUnitEdit}/>
                 <SecureRoute exact path="/currencyUnits-delete/:id" component={CurrencyUnitDelete}/>
                 <SecureRoute exact path="/currencyUnits-new" component={CurrencyUnitNew} />
+                  <SecureRoute exact path="/" component={HomePage} />
+                  <SecureRoute exact path="/users-list" component={UserList} />
+                  <SecureRoute exact path="/users-edit/:id" component={UserEdit} />
+                  <SecureRoute exact path="/users-delete/:id" component={UserDelete} />
+                  <SecureRoute exact path="/users-new" component={UserNew} />
+                  <SecureRoute exact path="/roles-list" component={RoleList} />
+                  <SecureRoute exact path="/roles-edit/:id" component={RoleEdit} />
+                  <SecureRoute exact path="/roles-delete/:id" component={RoleDelete} />
+                  <SecureRoute exact path="/roles-new" component={RoleNew} />
+                  <SecureRoute exact path="/customers-list" component={CustomerList} />
+                  <SecureRoute exact path="/customers-edit/:id" component={CustomerEdit} />
+                  <SecureRoute exact path="/customers-delete/:id" component={CustomerDelete} />
+                  <SecureRoute exact path="/customers-new" component={CustomerNew} />
+                  <SecureRoute exact path="/suppliers-list" component={SupplierList} />
+                  <SecureRoute exact path="/suppliers-edit/:id" component={SupplierEdit} />
+                  <SecureRoute exact path="/suppliers-delete/:id" component={SupplierDelete} />
+                  <SecureRoute exact path="/suppliers-new" component={SupplierNew} />
+                  <SecureRoute exact path="/payments-list" component={PaymentList} />
+                  <SecureRoute exact path="/payments-edit/:id" component={PaymentEdit} />
+                  <SecureRoute exact path="/payments-delete/:id" component={PaymentDelete} />
+                  <SecureRoute exact path="/payments-new" component={PaymentNew} />
+
                 </Switch>
               </Router>
             </ModalManager>
           </Provider>
         </Layout>
-        
+
       </>
     )
   }

@@ -23,6 +23,10 @@ import ProductCategoryDeleteModal from "../components/ProductCategories/ProductC
 import CurrencyUnitNewModal from "../components/CurrencyUnits/CurrencyUnitModals/CurrencyUnitNewModal";
 import CurrencyUnitEditModal from "../components/CurrencyUnits/CurrencyUnitModals/CurrencyUnitEditModal";
 import CurrencyUnitDeleteModal from "../components/CurrencyUnits/CurrencyUnitModals/CurrencyUnitDeleteModal";
+import PaymentNewModal from "../components/Payments/PaymentModals/PaymentNewModal";
+import PaymentEditModal from "../components/Payments/PaymentModals/PaymentEditModal";
+import PaymentDeleteModal from "../components/Payments/PaymentModals/PaymentDeleteModal";
+
 const ModalManager = () => {
   const modalLookup = {
     UserNewModal,
@@ -48,6 +52,9 @@ const ModalManager = () => {
     CurrencyUnitNewModal,
     CurrencyUnitEditModal,
     CurrencyUnitDeleteModal,
+    PaymentNewModal,
+    PaymentEditModal,
+    PaymentDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;
