@@ -16,6 +16,7 @@ const NavMenu = () => {
             <Nav.Link href="/products-list">Ürünler</Nav.Link>
             <Nav.Link href="/productCategories-list">Ürün Kategorileri</Nav.Link>
             <Nav.Link href="/currencyUnits-list">Para Birimleri</Nav.Link>
+            <Nav.Link href="/measurementUnits-list">Ölçü Birimleri</Nav.Link>
 
             <Nav.Link
               href="/login"
