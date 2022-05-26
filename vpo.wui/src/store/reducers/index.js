@@ -11,21 +11,23 @@ import supplierReducer from "./supplierReducer";
 import productCategoryReducer from "./productCategoryReducer";
 import currencyUnitReducer from "./currencyUnitReducer";
 import paymentReducer from "./paymentReducer";
+import petAnalysisReducer from "./petAnalysisReducer";
 
 const rootReducer = combineReducers({
-    userReducer,
-    roleReducer,
-    securityReducer,
-    modalReducer,
-    appointmentReducer,
-    petReducer,
-    productReducer,
-    customerReducer,
-    supplierReducer,
-    productCategoryReducer,
-    productCategoryReducer,
-    currencyUnitReducer,
-    paymentReducer,
-  });
-  
-  export default rootReducer;
+  userReducer,
+  roleReducer,
+  securityReducer,
+  modalReducer,
+  appointmentReducer,
+  petReducer,
+  productReducer,
+  customerReducer,
+  supplierReducer,
+  productCategoryReducer,
+  productCategoryReducer,
+  currencyUnitReducer,
+  paymentReducer,
+  petAnalysisReducer,
+});
+
+export default rootReducer;
