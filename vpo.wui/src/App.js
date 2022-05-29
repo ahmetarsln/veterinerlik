@@ -58,6 +58,14 @@ import PaymentList from "./components/Payments/PaymentList";
 import PaymentEdit from "./components/Payments/PaymentEdit";
 import PaymentNew from "./components/Payments/PaymentNew";
 import PaymentDelete from "./components/Payments/PaymentDelete";
+
+//Payment
+import PetAnalysisList from "./components/PetAnalysis/PetAnalysisList";
+import PetAnalysisEdit from "./components/PetAnalysis/PetAnalysisEdit";
+import PetAnalysisNew from "./components/PetAnalysis/PetAnalysisNew";
+import PetAnalysisDelete from "./components/PetAnalysis/PetAnalysisDelete";
+
+
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -78,39 +86,39 @@ class App extends PureComponent {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
                 <Switch>
-                <SecureRoute exact path="/" component={HomePage} />
-                <SecureRoute exact path="/users-list" component={UserList} />
-                <SecureRoute exact path="/users-edit/:id" component={UserEdit} />
-                <SecureRoute exact path="/users-delete/:id" component={UserDelete} />
-                <SecureRoute exact path="/users-new" component={UserNew} />
-                <SecureRoute exact path="/roles-list" component={RoleList} />
-                <SecureRoute exact path="/roles-edit/:id" component={RoleEdit} />
-                <SecureRoute exact path="/roles-delete/:id" component={RoleDelete} />
-                <SecureRoute exact path="/roles-new" component={RoleNew} />
-                <SecureRoute exact path="/pets-list" component={PetList} />
-                <SecureRoute exact path="/pets-edit/:id" component={PetEdit}/>
-                <SecureRoute exact path="/pets-delete/:id" component={PetDelete}/>
-                <SecureRoute exact path="/pets-new" component={PetNew} />
-                <SecureRoute exact path="/products-list" component={ProductList} />
-                <SecureRoute exact path="/products-edit/:id" component={ProductEdit}/>
-                <SecureRoute exact path="/products-delete/:id" component={ProductDelete}/>
-                <SecureRoute exact path="/products-new" component={ProductNew} />
-                <SecureRoute exact path="/customers-list" component={CustomerList} />
-                <SecureRoute exact path="/customers-edit/:id" component={CustomerEdit} />
-                <SecureRoute exact path="/customers-delete/:id" component={CustomerDelete} />
-                <SecureRoute exact path="/customers-new" component={CustomerNew} />
-                <SecureRoute exact path="/suppliers-list" component={SupplierList} />
-                <SecureRoute exact path="/suppliers-edit/:id" component={SupplierEdit} />
-                <SecureRoute exact path="/suppliers-delete/:id" component={SupplierDelete} />
-                <SecureRoute exact path="/suppliers-new" component={SupplierNew} />
-                <SecureRoute exact path="/productCategories-list" component={ProductCategoryList} />
-                <SecureRoute exact path="/productCategories-edit/:id" component={ProductCategoryEdit}/>
-                <SecureRoute exact path="/productCategories-delete/:id" component={ProductCategoryDelete}/>
-                <SecureRoute exact path="/productCategories-new" component={ProductCategoryNew} />
-                <SecureRoute exact path="/currencyUnits-list" component={CurrencyUnitList} />
-                <SecureRoute exact path="/currencyUnits-edit/:id" component={CurrencyUnitEdit}/>
-                <SecureRoute exact path="/currencyUnits-delete/:id" component={CurrencyUnitDelete}/>
-                <SecureRoute exact path="/currencyUnits-new" component={CurrencyUnitNew} />
+                  <SecureRoute exact path="/" component={HomePage} />
+                  <SecureRoute exact path="/users-list" component={UserList} />
+                  <SecureRoute exact path="/users-edit/:id" component={UserEdit} />
+                  <SecureRoute exact path="/users-delete/:id" component={UserDelete} />
+                  <SecureRoute exact path="/users-new" component={UserNew} />
+                  <SecureRoute exact path="/roles-list" component={RoleList} />
+                  <SecureRoute exact path="/roles-edit/:id" component={RoleEdit} />
+                  <SecureRoute exact path="/roles-delete/:id" component={RoleDelete} />
+                  <SecureRoute exact path="/roles-new" component={RoleNew} />
+                  <SecureRoute exact path="/pets-list" component={PetList} />
+                  <SecureRoute exact path="/pets-edit/:id" component={PetEdit} />
+                  <SecureRoute exact path="/pets-delete/:id" component={PetDelete} />
+                  <SecureRoute exact path="/pets-new" component={PetNew} />
+                  <SecureRoute exact path="/products-list" component={ProductList} />
+                  <SecureRoute exact path="/products-edit/:id" component={ProductEdit} />
+                  <SecureRoute exact path="/products-delete/:id" component={ProductDelete} />
+                  <SecureRoute exact path="/products-new" component={ProductNew} />
+                  <SecureRoute exact path="/customers-list" component={CustomerList} />
+                  <SecureRoute exact path="/customers-edit/:id" component={CustomerEdit} />
+                  <SecureRoute exact path="/customers-delete/:id" component={CustomerDelete} />
+                  <SecureRoute exact path="/customers-new" component={CustomerNew} />
+                  <SecureRoute exact path="/suppliers-list" component={SupplierList} />
+                  <SecureRoute exact path="/suppliers-edit/:id" component={SupplierEdit} />
+                  <SecureRoute exact path="/suppliers-delete/:id" component={SupplierDelete} />
+                  <SecureRoute exact path="/suppliers-new" component={SupplierNew} />
+                  <SecureRoute exact path="/productCategories-list" component={ProductCategoryList} />
+                  <SecureRoute exact path="/productCategories-edit/:id" component={ProductCategoryEdit} />
+                  <SecureRoute exact path="/productCategories-delete/:id" component={ProductCategoryDelete} />
+                  <SecureRoute exact path="/productCategories-new" component={ProductCategoryNew} />
+                  <SecureRoute exact path="/currencyUnits-list" component={CurrencyUnitList} />
+                  <SecureRoute exact path="/currencyUnits-edit/:id" component={CurrencyUnitEdit} />
+                  <SecureRoute exact path="/currencyUnits-delete/:id" component={CurrencyUnitDelete} />
+                  <SecureRoute exact path="/currencyUnits-new" component={CurrencyUnitNew} />
                   <SecureRoute exact path="/" component={HomePage} />
                   <SecureRoute exact path="/users-list" component={UserList} />
                   <SecureRoute exact path="/users-edit/:id" component={UserEdit} />
@@ -132,6 +140,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/payments-edit/:id" component={PaymentEdit} />
                   <SecureRoute exact path="/payments-delete/:id" component={PaymentDelete} />
                   <SecureRoute exact path="/payments-new" component={PaymentNew} />
+                  <SecureRoute exact path="/pet-analysis-list" component={PetAnalysisList} />
+                  <SecureRoute exact path="/pet-analysis-edit/:id" component={PetAnalysisEdit} />
+                  <SecureRoute exact path="/pet-analysis-delete/:id" component={PetAnalysisDelete} />
+                  <SecureRoute exact path="/pet-analysis-new" component={PetAnalysisNew} />
 
                 </Switch>
               </Router>
