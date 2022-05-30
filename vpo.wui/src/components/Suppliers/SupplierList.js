@@ -52,7 +52,7 @@ const SupplierList = () => {
             variant="outline-primary"
             onClick={() => openSupplierNewModal()}
           >
-            Yeni Evcil Hayvan Ekle
+            Yeni Tedarikçi Ekle
           </Button>
         </div>
 
@@ -66,7 +66,7 @@ const SupplierList = () => {
                   </Col>
                   <Col>
                     <p>
-                      {item.id} - {item.nameSurname}
+                      {item.id} - {item.supplierName}
                     </p>
                   </Col>
                   <Col>

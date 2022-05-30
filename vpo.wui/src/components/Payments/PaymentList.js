@@ -52,7 +52,7 @@ const PaymentList = () => {
                         variant="outline-primary"
                         onClick={() => openPaymentNewModal()}
                     >
-                        Yeni Evcil Hayvan Ekle
+                        Yeni Ödeme Ekle
                     </Button>
                 </div>
 
@@ -66,7 +66,7 @@ const PaymentList = () => {
                                     </Col>
                                     <Col>
                                         <p>
-                                            {item.id} - {item.nameSurname}
+                                            {item.id} - {item.paymentNameSurname}
                                         </p>
                                     </Col>
                                     <Col>
