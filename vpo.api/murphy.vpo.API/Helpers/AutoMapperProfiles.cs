@@ -22,6 +22,7 @@ namespace murphy.vpo.API.Helpers
         CreateMap<Customer, CustomerDto>().ReverseMap();
         CreateMap<Supplier, SupplierDto>().ReverseMap();
         CreateMap<Payment, PaymentDto>().ReverseMap();
+        CreateMap<Payment, ParameterDto>().ReverseMap();
         }
     }
 }
