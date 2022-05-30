@@ -28,6 +28,7 @@ namespace murphy.vpo.DAL.Concrete.EntityFramework
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Parameter> Parameters { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
         public VpoDbContext(DbContextOptions<VpoDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
