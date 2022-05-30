@@ -7,18 +7,18 @@ import petReducer from "./petReducer";
 import productReducer from "./productReducer";
 import productCategoryReducer from "./productCategoryReducer";
 import currencyUnitReducer from "./currencyUnitReducer";
+import measurementUnitReducer from "./measurementUnitReducer";
 
 const rootReducer = combineReducers({
-    userReducer,
-    roleReducer,
-    securityReducer,
-    modalReducer,
-    petReducer,
-    productReducer,
-    productCategoryReducer,
-    currencyUnitReducer
-    
-  });
-  
-  export default rootReducer;
-  
+  userReducer,
+  roleReducer,
+  securityReducer,
+  modalReducer,
+  petReducer,
+  productReducer,
+  productCategoryReducer,
+  currencyUnitReducer,
+  measurementUnitReducer,
+});
+
+export default rootReducer;
