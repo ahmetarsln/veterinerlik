@@ -14,6 +14,9 @@ import SupplierDeleteModal from "../components/Suppliers/SupplierModals/Supplier
 import PaymentNewModal from "../components/Payments/PaymentModals/PaymentNewModal";
 import PaymentEditModal from "../components/Payments/PaymentModals/PaymentEditModal";
 import PaymentDeleteModal from "../components/Payments/PaymentModals/PaymentDeleteModal";
+import ParameterNewModal from "../components/Parameters/ParameterModals/ParameterNewModal";
+import ParameterEditModal from "../components/Parameters/ParameterModals/ParameterEditModal";
+import ParameterDeleteModal from "../components/Parameters/ParameterModals/ParameterDeleteModal";
 
 const ModalManager = () => {
   const modalLookup = {
@@ -31,6 +34,9 @@ const ModalManager = () => {
     PaymentNewModal,
     PaymentEditModal,
     PaymentDeleteModal,
+    ParameterNewModal,
+    ParameterEditModal,
+    ParameterDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;
