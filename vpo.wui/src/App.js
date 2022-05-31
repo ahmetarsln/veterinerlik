@@ -33,6 +33,11 @@ import PaymentList from "./components/Payments/PaymentList";
 import PaymentEdit from "./components/Payments/PaymentEdit";
 import PaymentNew from "./components/Payments/PaymentNew";
 import PaymentDelete from "./components/Payments/PaymentDelete";
+//Payment
+import ParameterList from "./components/Parameters/ParameterList";
+import ParameterEdit from "./components/Parameters/ParameterEdit";
+import ParameterNew from "./components/Parameters/ParameterNew";
+import ParameterDelete from "./components/Parameters/ParameterDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -74,6 +79,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/payments-edit/:id" component={PaymentEdit} />
                   <SecureRoute exact path="/payments-delete/:id" component={PaymentDelete} />
                   <SecureRoute exact path="/payments-new" component={PaymentNew} />
+                  <SecureRoute exact path="/parameters-list" component={ParameterList} />
+                  <SecureRoute exact path="/parameters-edit/:id" component={ParameterEdit} />
+                  <SecureRoute exact path="/parameters-delete/:id" component={ParameterDelete} />
+                  <SecureRoute exact path="/parameters-new" component={ParameterNew} />
 
                 </Switch>
               </Router>
