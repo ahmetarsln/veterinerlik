@@ -79,6 +79,9 @@ namespace murphy.vpo.API
             services.AddScoped<IMeasurementUnitDal, EfMeasurementUnitDal>();
             services.AddScoped<IMeasurementUnitService, MeasurementUnitManager>();
 
+            services.AddScoped<IClinicalInformationDal, EfClinicalInformationDal>();
+            services.AddScoped<IClinicalInformationService, ClinicalInformationManager>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
