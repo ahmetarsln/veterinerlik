@@ -19,6 +19,7 @@ const NavMenu = () => {
             <Nav.Link href="/productCategories-list">Ürün Kategorileri</Nav.Link>
             <Nav.Link href="/currencyUnits-list">Para Birimleri</Nav.Link>
             <Nav.Link href="/payments-list">Ödemeler</Nav.Link>
+            <Nav.Link href="/pet-analysis-list">Pet Tahlil</Nav.Link>
 
 
             <Nav.Link
