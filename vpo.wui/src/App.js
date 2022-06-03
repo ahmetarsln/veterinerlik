@@ -66,6 +66,13 @@ import MeasurementUnitEdit from "./components/MeasurementUnits/MeasurementUnitEd
 import MeasurementUnitNew from "./components/MeasurementUnits/MeasurementUnitNew";
 import MeasurementUnitDelete from "./components/MeasurementUnits/MeasurementUnitDelete";
 
+//Payment
+import PetAnalysisList from "./components/PetAnalysis/PetAnalysisList";
+import PetAnalysisEdit from "./components/PetAnalysis/PetAnalysisEdit";
+import PetAnalysisNew from "./components/PetAnalysis/PetAnalysisNew";
+import PetAnalysisDelete from "./components/PetAnalysis/PetAnalysisDelete";
+
+
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -126,12 +133,16 @@ class App extends PureComponent {
                   <SecureRoute exact path="/measurementUnits-edit/:id" component={MeasurementUnitEdit} />
                   <SecureRoute exact path="/measurementUnits-delete/:id" component={MeasurementUnitDelete} />
                   <SecureRoute exact path="/measurementUnits-new" component={MeasurementUnitNew} />
+                  <SecureRoute exact path="/pet-analysis-list" component={PetAnalysisList} />
+                  <SecureRoute exact path="/pet-analysis-edit/:id" component={PetAnalysisEdit} />
+                  <SecureRoute exact path="/pet-analysis-delete/:id" component={PetAnalysisDelete} />
+                  <SecureRoute exact path="/pet-analysis-new" component={PetAnalysisNew} />
 
-                </Switch>
-              </Router>
-            </ModalManager>
-          </Provider>
-        </Layout>
+                </Switch >
+              </Router >
+            </ModalManager >
+          </Provider >
+        </Layout >
       </>
     );
   }

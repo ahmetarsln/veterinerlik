@@ -11,6 +11,7 @@ import supplierReducer from "./supplierReducer";
 import productCategoryReducer from "./productCategoryReducer";
 import currencyUnitReducer from "./currencyUnitReducer";
 import paymentReducer from "./paymentReducer";
+import petAnalysisReducer from "./petAnalysisReducer";
 
 const rootReducer = combineReducers({
   userReducer,
@@ -26,6 +27,7 @@ const rootReducer = combineReducers({
   productCategoryReducer,
   currencyUnitReducer,
   paymentReducer,
+  petAnalysisReducer,
 });
 
 export default rootReducer;
