@@ -42,6 +42,11 @@ import MeasurementUnitList from "./components/MeasurementUnits/MeasurementUnitLi
 import MeasurementUnitEdit from "./components/MeasurementUnits/MeasurementUnitEdit";
 import MeasurementUnitNew from "./components/MeasurementUnits/MeasurementUnitNew";
 import MeasurementUnitDelete from "./components/MeasurementUnits/MeasurementUnitDelete";
+//ClinicalInformation
+import ClinicalInformationList from "./components/ClinicalInformations/ClinicalInformationList";
+import ClinicalInformationEdit from "./components/ClinicalInformations/ClinicalInformationEdit";
+import ClinicalInformationNew from "./components/ClinicalInformations/ClinicalInformationNew";
+import ClinicalInformationDelete from "./components/ClinicalInformations/ClinicalInformationDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -90,6 +95,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/measurementUnits-edit/:id" component={MeasurementUnitEdit} />
                   <SecureRoute exact path="/measurementUnits-delete/:id" component={MeasurementUnitDelete} />
                   <SecureRoute exact path="/measurementUnits-new" component={MeasurementUnitNew} />
+                  <SecureRoute exact path="/clinicalInformations-list" component={ClinicalInformationList} />
+                  <SecureRoute exact path="/clinicalInformations-edit/:id" component={ClinicalInformationEdit} />
+                  <SecureRoute exact path="/clinicalInformations-delete/:id" component={ClinicalInformationDelete} />
+                  <SecureRoute exact path="/clinicalInformations-new" component={ClinicalInformationNew} />
                 </Switch>
               </Router>
             </ModalManager>
