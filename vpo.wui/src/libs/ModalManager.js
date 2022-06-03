@@ -26,6 +26,9 @@ import CurrencyUnitDeleteModal from "../components/CurrencyUnits/CurrencyUnitMod
 import PaymentNewModal from "../components/Payments/PaymentModals/PaymentNewModal";
 import PaymentEditModal from "../components/Payments/PaymentModals/PaymentEditModal";
 import PaymentDeleteModal from "../components/Payments/PaymentModals/PaymentDeleteModal";
+import MeasurementUnitNewModal from "../components/MeasurementUnits/MeasurementUnitModals/MeasurementUnitNewModal";
+import MeasurementUnitEditModal from "../components/MeasurementUnits/MeasurementUnitModals/MeasurementUnitEditModal";
+import MeasurementUnitDeleteModal from "../components/MeasurementUnits/MeasurementUnitModals/MeasurementUnitDeleteModal";
 
 const ModalManager = () => {
   const modalLookup = {
@@ -55,6 +58,9 @@ const ModalManager = () => {
     PaymentNewModal,
     PaymentEditModal,
     PaymentDeleteModal,
+    MeasurementUnitNewModal,
+    MeasurementUnitEditModal,
+    MeasurementUnitDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;

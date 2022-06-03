@@ -13,19 +13,19 @@ import currencyUnitReducer from "./currencyUnitReducer";
 import paymentReducer from "./paymentReducer";
 
 const rootReducer = combineReducers({
-    userReducer,
-    roleReducer,
-    securityReducer,
-    modalReducer,
-    appointmentReducer,
-    petReducer,
-    productReducer,
-    customerReducer,
-    supplierReducer,
-    productCategoryReducer,
-    productCategoryReducer,
-    currencyUnitReducer,
-    paymentReducer,
-  });
-  
-  export default rootReducer;
+  userReducer,
+  roleReducer,
+  securityReducer,
+  modalReducer,
+  appointmentReducer,
+  petReducer,
+  productReducer,
+  customerReducer,
+  supplierReducer,
+  productCategoryReducer,
+  productCategoryReducer,
+  currencyUnitReducer,
+  paymentReducer,
+});
+
+export default rootReducer;
