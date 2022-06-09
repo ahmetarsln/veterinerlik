@@ -82,6 +82,9 @@ namespace murphy.vpo.API
             services.AddScoped<IClinicalInformationDal, EfClinicalInformationDal>();
             services.AddScoped<IClinicalInformationService, ClinicalInformationManager>();
 
+            services.AddScoped<IInvoiceDal, EfInvoiceDal>();
+            services.AddScoped<IInvoiceService, InvoiceManager>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
