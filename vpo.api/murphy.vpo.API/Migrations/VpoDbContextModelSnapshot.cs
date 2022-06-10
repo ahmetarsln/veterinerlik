@@ -100,6 +100,57 @@ namespace murphy.vpo.API.Migrations
                     b.ToTable("CurrencyUnits");
                 });
 
+            modelBuilder.Entity("murphy.vpo.Entity.Concrete.Invoice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InvoiceDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InvoiceFooter")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InvoiceHeader")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InvoiceNextNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InvoiceNoNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InvoiceNumberPrefix")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InvoiceSubtitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaymentTerms")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Invoices");
+                });
+
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.MeasurementUnit", b =>
                 {
                     b.Property<int>("Id")
