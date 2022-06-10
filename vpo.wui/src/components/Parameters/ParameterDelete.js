@@ -1,34 +1,34 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { deletePayment } from "../../store/actions/paymentActions";
+import { deleteParameter } from "../../store/actions/parameterActions";
 import { closeModal } from "../../store/actions/modalActions";
 import { Button, Row, Col, Container } from "react-bootstrap";
 
-const PaymentDelete = () => {
+const ParameterDelete = () => {
     const dispatch = useDispatch();
-    const payment = useSelector((state) => state.paymentReducer.currentPayment);
+    const parameter = useSelector((state) => state.parameterReducer.currentParameter);
 
-    const RemovePayment = (e) => {
-        dispatch(deletePayment(e));
+    const RemoveParameter = (e) => {
+        dispatch(deleteParameter(e));
         dispatch(closeModal());
     };
-    const ClosePayment = (e) => {
+    const CloseParameter = (e) => {
         dispatch(closeModal());
     };
 
     return (
         <>
-            <h6>{payment.id}. kayıtı silmek istiyor musunuz?</h6>
+            <h6>{parameter.id}. kayıtı silmek istiyor musunuz?</h6>
             <Container>
                 <Row xs="auto">
                     <Col>
-                        <Button variant="primary" onClick={() => ClosePayment()}>
+                        <Button variant="primary" onClick={() => CloseParameter()}>
                             Hayır
                         </Button>
                     </Col>
                     <Col>
                         {" "}
-                        <Button variant="danger" onClick={() => RemovePayment(payment.id)}>
+                        <Button variant="danger" onClick={() => RemoveParameter(parameter.id)}>
                             Evet
                         </Button>
                     </Col>
@@ -37,4 +37,4 @@ const PaymentDelete = () => {
         </>
     );
 };
-export default PaymentDelete;
+export default ParameterDelete;

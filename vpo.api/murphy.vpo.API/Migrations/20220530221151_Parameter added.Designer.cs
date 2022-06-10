@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using murphy.vpo.DAL.Concrete.EntityFramework;
 
 namespace murphy.vpo.API.Migrations
 {
     [DbContext(typeof(VpoDbContext))]
-    partial class VpoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220530221151_Parameter added")]
+    partial class Parameteradded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -19,48 +21,7 @@ namespace murphy.vpo.API.Migrations
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Customer", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int")
-                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                b.Property<DateTime>("CreatedAt")
-                    .HasColumnType("datetime2");
-
-                b.Property<string>("CreatedBy")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<string>("CustomerAdress")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<string>("CustomerMail")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<string>("CustomerName")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<string>("CustomerNote")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<string>("CustomerTel")
-                        .HasColumnType("nvarchar(max)");
-
-                b.Property<bool>("IsDeleted")
-                    .HasColumnType("bit");
-
-                b.Property<DateTime>("ModifiedAt")
-                    .HasColumnType("datetime2");
-
-                b.Property<string>("ModifiedBy")
-                    .HasColumnType("nvarchar(max)");
-
-                b.HasKey("Id");
-                b.ToTable("Customers");
-            });
-            modelBuilder.Entity("murphy.vpo.Entity.Concrete.CurrencyUnit", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -72,17 +33,20 @@ namespace murphy.vpo.API.Migrations
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
-                
-                    b.Property<string>("CurrencyUnitActivityStatus")
+
+                    b.Property<string>("CustomerAdress")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CurrencyUnitCode")
+                    b.Property<string>("CustomerMail")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CurrencyUnitName")
+                    b.Property<string>("CustomerName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CurrencyUnitRate")
+                    b.Property<string>("CustomerNote")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerTel")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDeleted")
@@ -96,42 +60,8 @@ namespace murphy.vpo.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CurrencyUnits");
+                    b.ToTable("Customers");
                 });
-            modelBuilder.Entity("murphy.vpo.Entity.Concrete.MeasurementUnit", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int")
-                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-                b.Property<DateTime>("CreatedAt")
-                    .HasColumnType("datetime2");
-
-                b.Property<string>("CreatedBy")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<bool>("IsDeleted")
-                    .HasColumnType("bit");
-
-                b.Property<string>("MeasurementUnitDescription")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<string>("MeasurementUnitName")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<DateTime>("ModifiedAt")
-                    .HasColumnType("datetime2");
-
-                b.Property<string>("ModifiedBy")
-                    .HasColumnType("nvarchar(max)");
-
-                b.Property<string>("UnitOfMeasureValue")
-                    .HasColumnType("nvarchar(max)");
-
-                b.HasKey("Id");
-
-                b.ToTable("MeasurementUnits");
-            });
 
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Parameter", b =>
                 {
@@ -176,46 +106,46 @@ namespace murphy.vpo.API.Migrations
                 });
 
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Payment", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int")
-                    .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                b.Property<DateTime>("CreatedAt")
-                    .HasColumnType("datetime2");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
-                b.Property<string>("CreatedBy")
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<bool>("IsDeleted")
-                    .HasColumnType("bit");
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
-                b.Property<DateTime>("ModifiedAt")
-                    .HasColumnType("datetime2");
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
 
-                b.Property<string>("ModifiedBy")
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("PaymentDate")
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("PaymentDate")
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("PaymentExpiryDate")
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("PaymentExpiryDate")
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("PaymentNameSurname")
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("PaymentNameSurname")
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("PaymentTotal")
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("PaymentTotal")
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("PaymentType")
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("PaymentType")
+                        .HasColumnType("nvarchar(max)");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("Payments");
-            });
+                    b.ToTable("Payments");
+                });
 
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Pet", b =>
                 {
@@ -257,81 +187,6 @@ namespace murphy.vpo.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Pets");
-                });
-
-            modelBuilder.Entity("murphy.vpo.Entity.Concrete.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductCategory")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductImage")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductPurchasePrice")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductSalesPrice")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductTaxRate")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("murphy.vpo.Entity.Concrete.ProductCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("ModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ProductCategoryName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ProductCategories");
                 });
 
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Role", b =>

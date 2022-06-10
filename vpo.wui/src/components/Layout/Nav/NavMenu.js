@@ -21,6 +21,7 @@ const NavMenu = () => {
             <Nav.Link href="/payments-list">Ödemeler</Nav.Link>
             <Nav.Link href="/measurementUnits-list">Ölçü Birimleri</Nav.Link>
             <Nav.Link href="/pet-analysis-list">Pet Tahlil</Nav.Link>
+            <Nav.Link href="/parameters-list">Parametreler</Nav.Link>
 
 
             <Nav.Link

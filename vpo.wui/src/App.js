@@ -54,11 +54,6 @@ import CurrencyUnitNew from "./components/CurrencyUnits/CurrencyUnitNew";
 import CurrencyUnitDelete from "./components/CurrencyUnits/CurrencyUnitDelete";
 
 
-//Payment
-import PaymentList from "./components/Payments/PaymentList";
-import PaymentEdit from "./components/Payments/PaymentEdit";
-import PaymentNew from "./components/Payments/PaymentNew";
-import PaymentDelete from "./components/Payments/PaymentDelete";
 
 //MeasurementUnit
 import MeasurementUnitList from "./components/MeasurementUnits/MeasurementUnitList";
@@ -72,6 +67,12 @@ import PetAnalysisEdit from "./components/PetAnalysis/PetAnalysisEdit";
 import PetAnalysisNew from "./components/PetAnalysis/PetAnalysisNew";
 import PetAnalysisDelete from "./components/PetAnalysis/PetAnalysisDelete";
 
+
+//Parameter
+import ParameterList from "./components/Parameters/ParameterList";
+import ParameterEdit from "./components/Parameters/ParameterEdit";
+import ParameterNew from "./components/Parameters/ParameterNew";
+import ParameterDelete from "./components/Parameters/ParameterDelete";
 
 //Modal
 import ModalManager from "./libs/ModalManager";
@@ -137,6 +138,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/pet-analysis-edit/:id" component={PetAnalysisEdit} />
                   <SecureRoute exact path="/pet-analysis-delete/:id" component={PetAnalysisDelete} />
                   <SecureRoute exact path="/pet-analysis-new" component={PetAnalysisNew} />
+                  <SecureRoute exact path="/parameters-list" component={ParameterList} />
+                  <SecureRoute exact path="/parameters-edit/:id" component={ParameterEdit} />
+                  <SecureRoute exact path="/parameters-delete/:id" component={ParameterDelete} />
+                  <SecureRoute exact path="/parameters-new" component={ParameterNew} />
 
                 </Switch >
               </Router >

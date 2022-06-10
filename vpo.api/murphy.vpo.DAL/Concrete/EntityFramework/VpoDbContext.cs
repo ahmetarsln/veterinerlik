@@ -32,6 +32,7 @@ namespace murphy.vpo.DAL.Concrete.EntityFramework
         public DbSet<CurrencyUnit> CurrencyUnits { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<MeasurementUnit> MeasurementUnits { get; set; }
+        public DbSet<Parameter> Parameters { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
         public VpoDbContext(DbContextOptions<VpoDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)

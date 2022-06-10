@@ -1,26 +1,26 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updatePayment } from "../../store/actions/paymentActions";
+import { updateParameter } from "../../store/actions/parameterActions";
 import { closeModal } from "../../store/actions/modalActions";
 import { Formik, Form } from "formik";
-import PaymentForm from "./PaymentForm";
+import ParameterForm from "./ParameterForm";
 
 import * as yup from "yup";
 
-const PaymentEdit = () => {
+const ParameterEdit = () => {
     const dispatch = useDispatch();
-    const payment = useSelector((state) => state.paymentReducer.currentPayment);
+    const parameter = useSelector((state) => state.parameterReducer.currentParameter);
 
     const schema = yup.object({
-        paymentNameSurname: yup.string().required(),
-        paymentTotal: yup.string().required(),
-        paymentDate: yup.string().required(),
-        paymentExpiryDate: yup.string().required(),
-        paymentType: yup.string().required()
+        parameterName: yup.string().required(),
+        parameterLowerValue: yup.string().required(),
+        parameterUpperValue: yup.string().required(),
+        parameterDimension: yup.string().required(),
+        parameterComment: yup.string().required()
     });
 
     const handleSubmit = (e) => {
-        dispatch(updatePayment(e));
+        dispatch(updateParameter(e));
         dispatch(closeModal());
     };
 
@@ -32,14 +32,14 @@ const PaymentEdit = () => {
                     onSubmit={(values, actions) => {
                         handleSubmit(values);
                     }}
-                    initialValues={payment}
+                    initialValues={parameter}
                 >
                     <Form>
-                        <PaymentForm />
+                        <ParameterForm />
                     </Form>
                 </Formik>
             </div>
         </>
     );
 };
-export default PaymentEdit;
+export default ParameterEdit;

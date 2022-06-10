@@ -1,47 +1,47 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changePayment, fetchPayments } from "../../store/actions/paymentActions";
+import { changeParameter, fetchParameters } from "../../store/actions/parameterActions";
 import { openModal } from "../../store/actions/modalActions";
 import { ListGroup, Button, Row, Col, Container } from "react-bootstrap";
 import { Person } from "react-bootstrap-icons";
 
-const PaymentList = () => {
+const ParameterList = () => {
     const dispatch = useDispatch();
-    const payments = useSelector((state) => state.paymentReducer.payments);
+    const parameters = useSelector((state) => state.parameterReducer.parameters);
 
-    const selectPayment = (payment) => {
-        dispatch(changePayment(payment));
+    const selectParameter = (parameter) => {
+        dispatch(changeParameter(parameter));
     };
 
-    const openPaymentNewModal = () => {
+    const openParameterNewModal = () => {
         dispatch(
             openModal({
-                modalType: "PaymentNewModal",
-                modalProps: { title: "Yeni Ödeme" },
+                modalType: "ParameterNewModal",
+                modalProps: { title: "Yeni Parametre" },
             })
         );
     };
-    const openPaymentEditModal = (e) => {
-        dispatch(changePayment(e));
+    const openParameterEditModal = (e) => {
+        dispatch(changeParameter(e));
         dispatch(
             openModal({
-                modalType: "PaymentEditModal",
+                modalType: "ParameterEditModal",
                 modalProps: { title: "Düzenle" },
             })
         );
     };
-    const openPaymentDeleteModal = (e) => {
-        dispatch(changePayment(e));
+    const openParameterDeleteModal = (e) => {
+        dispatch(changeParameter(e));
         dispatch(
             openModal({
-                modalType: "PaymentDeleteModal",
+                modalType: "ParameterDeleteModal",
                 modalProps: { title: "Sil" },
             })
         );
     };
 
     useEffect(() => {
-        return dispatch(fetchPayments());
+        return dispatch(fetchParameters());
     }, []);
 
     return (
@@ -50,14 +50,14 @@ const PaymentList = () => {
                 <div>
                     <Button
                         variant="outline-primary"
-                        onClick={() => openPaymentNewModal()}
+                        onClick={() => openParameterNewModal()}
                     >
-                        Yeni Ödeme Ekle
+                        Yeni Parametre Ekle
                     </Button>
                 </div>
 
                 <ListGroup variant="flush">
-                    {payments.map((item) => (
+                    {parameters.map((item) => (
                         <ListGroup.Item key={item.id}>
                             <Container>
                                 <Row xs="auto">
@@ -66,14 +66,14 @@ const PaymentList = () => {
                                     </Col>
                                     <Col>
                                         <p>
-                                            {item.id} - {item.paymentNameSurname}
+                                            {item.id} - {item.parameterName}
                                         </p>
                                     </Col>
                                     <Col>
                                         <Button
                                             size="sm"
                                             variant="primary"
-                                            onClick={() => openPaymentEditModal(item)}
+                                            onClick={() => openParameterEditModal(item)}
                                         >
                                             Düzenle
                                         </Button>
@@ -82,7 +82,7 @@ const PaymentList = () => {
                                         <Button
                                             size="sm"
                                             variant="danger"
-                                            onClick={() => openPaymentDeleteModal(item)}
+                                            onClick={() => openParameterDeleteModal(item)}
                                         >
                                             Sil
                                         </Button>
@@ -96,4 +96,4 @@ const PaymentList = () => {
         </div>
     );
 };
-export default PaymentList;
+export default ParameterList;
