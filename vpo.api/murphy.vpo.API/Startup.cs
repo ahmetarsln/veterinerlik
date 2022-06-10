@@ -84,6 +84,9 @@ namespace murphy.vpo.API
             services.AddScoped<IPetAnalysisService, PetAnalysisManager>();
             services.AddScoped<IParameterDal, EfParameterDal>();
             services.AddScoped<IParameterService, ParameterManager>();
+            services.AddScoped<IClinicalInformationDal, EfClinicalInformationDal>();
+            services.AddScoped<IClinicalInformationService, ClinicalInformationManager>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
