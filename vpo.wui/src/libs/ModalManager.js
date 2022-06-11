@@ -24,6 +24,9 @@ import MeasurementUnitDeleteModal from "../components/MeasurementUnits/Measureme
 import ClinicalInformationNewModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationNewModal";
 import ClinicalInformationEditModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationEditModal";
 import ClinicalInformationDeleteModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationDeleteModal";
+import InvoiceNewModal from "../components/Invoices/InvoiceModals/InvoiceNewModal";
+import InvoiceEditModal from "../components/Invoices/InvoiceModals/InvoiceEditModal";
+import InvoiceDeleteModal from "../components/Invoices/InvoiceModals/InvoiceDeleteModal";
 const ModalManager = () => {
   const modalLookup = {
     UserNewModal,
@@ -49,6 +52,9 @@ const ModalManager = () => {
     ClinicalInformationNewModal,
     ClinicalInformationEditModal,
     ClinicalInformationDeleteModal,
+    InvoiceNewModal,
+    InvoiceEditModal,
+    InvoiceDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;
