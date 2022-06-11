@@ -8,7 +8,7 @@ import productReducer from "./productReducer";
 import productCategoryReducer from "./productCategoryReducer";
 import currencyUnitReducer from "./currencyUnitReducer";
 import measurementUnitReducer from "./measurementUnitReducer";
-import clinicalInformation from "./clinicalInformationReducer";
+import clinicalInformationReducer from "./clinicalInformationReducer";
 import invoiceReducer from "./invoiceReducer";
 
 const rootReducer = combineReducers({
@@ -21,7 +21,7 @@ const rootReducer = combineReducers({
   productCategoryReducer,
   currencyUnitReducer,
   measurementUnitReducer,
-  clinicalInformation,
+  clinicalInformationReducer,
   invoiceReducer,
 });
 
