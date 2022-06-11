@@ -11,34 +11,34 @@ namespace murphy.vpo.BAL.Concrete
 {
     public class PetAnalysisManager : IPetAnalysisService
     {
-        private readonly IPetAnalysisDal _PetAnalysisDal;
+        private readonly IPetAnalysisDal _petAnalysisDal;
         public PetAnalysisManager(IPetAnalysisDal petAnalysisDal)
         {
-            _PetAnalysisDal = petAnalysisDal;
+            _petAnalysisDal = petAnalysisDal;
         }
-        public async Task AddAsync(PetAnalysis PetAnalysis)
+        public async Task AddAsync(PetAnalysis petAnalysis)
         {
-            await _PetAnalysisDal.AddAsync(PetAnalysis, true);
+            await _petAnalysisDal.AddAsync(petAnalysis, true);
         }
 
-        public async Task DeleteAsync(int PetAnalysisId)
+        public async Task DeleteAsync(int petAnalysisId)
         {
-            await _PetAnalysisDal.DeleteAsync(PetAnalysisId, true);
+            await _petAnalysisDal.DeleteAsync(petAnalysisId, true);
         }
 
         public async Task<IList<PetAnalysis>> GetAllAsync()
         {
-            return await _PetAnalysisDal.GetAllAsync();
+            return await _petAnalysisDal.GetAllAsync();
         }
 
-        public async Task<PetAnalysis> GetByIdAsync(int PetAnalysisId)
+        public async Task<PetAnalysis> GetByIdAsync(int petAnalysisId)
         {
-            return await _PetAnalysisDal.GetByIdAsync(PetAnalysisId);
+            return await _petAnalysisDal.GetByIdAsync(petAnalysisId);
         }
 
-        public async Task UpdateAsync(PetAnalysis PetAnalysis)
+        public async Task UpdateAsync(PetAnalysis petAnalysis)
         {
-            await _PetAnalysisDal.UpdateAsync(PetAnalysis, PetAnalysis.Id, true);
+            await _petAnalysisDal.UpdateAsync(petAnalysis, petAnalysis.Id, true);
         }
     }
 }

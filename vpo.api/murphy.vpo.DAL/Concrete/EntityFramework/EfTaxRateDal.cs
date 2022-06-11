@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace murphy.vpo.DAL.Concrete.EntityFramework
 {
-    public class EfAppointmentDal : EfEntityRepositoryBase<Appointment>,IAppointmentDal 
+    public class EfTaxRateDal : EfEntityRepositoryBase<TaxRate>, ITaxRateDal
     {
         private VpoDbContext _vpoDbContext;
-        public EfAppointmentDal(VpoDbContext vpoDbContext) : base(vpoDbContext)
+        public EfTaxRateDal(VpoDbContext vpoDbContext) : base(vpoDbContext)
         {
             _vpoDbContext = vpoDbContext;
         }
