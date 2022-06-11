@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace murphy.vpo.DAL.Concrete.EntityFramework
 {
-    internal class EfAppointmentDal : EfEntityRepositoryBase<Appointment>,IAppointmentDal 
+    public class EfAppointmentDal : EfEntityRepositoryBase<Appointment>,IAppointmentDal 
     {
         private VpoDbContext _vpoDbContext;
         public EfAppointmentDal(VpoDbContext vpoDbContext) : base(vpoDbContext)
