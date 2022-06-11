@@ -47,6 +47,11 @@ import ClinicalInformationList from "./components/ClinicalInformations/ClinicalI
 import ClinicalInformationEdit from "./components/ClinicalInformations/ClinicalInformationEdit";
 import ClinicalInformationNew from "./components/ClinicalInformations/ClinicalInformationNew";
 import ClinicalInformationDelete from "./components/ClinicalInformations/ClinicalInformationDelete";
+//Invoice
+import InvoiceList from "./components/Invoices/InvoiceList";
+import InvoiceEdit from "./components/Invoices/InvoiceEdit";
+import InvoiceNew from "./components/Invoices/InvoiceNew";
+import InvoiceDelete from "./components/Invoices/InvoiceDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -99,6 +104,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/clinicalInformations-edit/:id" component={ClinicalInformationEdit} />
                   <SecureRoute exact path="/clinicalInformations-delete/:id" component={ClinicalInformationDelete} />
                   <SecureRoute exact path="/clinicalInformations-new" component={ClinicalInformationNew} />
+                  <SecureRoute exact path="/invoices-list" component={InvoiceList} />
+                  <SecureRoute exact path="/invoices-edit/:id" component={InvoiceEdit} />
+                  <SecureRoute exact path="/invoices-delete/:id" component={InvoiceDelete} />
+                  <SecureRoute exact path="/invoices-new" component={InvoiceNew} />
                 </Switch>
               </Router>
             </ModalManager>
