@@ -304,6 +304,51 @@ namespace murphy.vpo.API.Migrations
                     b.ToTable("ProductCategories");
                 });
 
+            modelBuilder.Entity("murphy.vpo.Entity.Concrete.Report", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Collections")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CollectionsComplate")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Payments")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PaymentsComplate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Treatments")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Vaccines")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reports");
+                });
+
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Role", b =>
                 {
                     b.Property<int>("Id")
