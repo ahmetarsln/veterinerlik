@@ -34,6 +34,9 @@ import ParameterEditModal from "../components/Parameters/ParameterModals/Paramet
 import ParameterDeleteModal from "../components/Parameters/ParameterModals/ParameterDeleteModal";
 
 
+import ClinicalInformationNewModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationNewModal";
+import ClinicalInformationEditModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationEditModal";
+import ClinicalInformationDeleteModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationDeleteModal";
 const ModalManager = () => {
   const modalLookup = {
     UserNewModal,
@@ -68,6 +71,9 @@ const ModalManager = () => {
     ParameterNewModal,
     ParameterEditModal,
     ParameterDeleteModal,
+    ClinicalInformationNewModal,
+    ClinicalInformationEditModal,
+    ClinicalInformationDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;

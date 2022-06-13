@@ -74,6 +74,11 @@ import ParameterEdit from "./components/Parameters/ParameterEdit";
 import ParameterNew from "./components/Parameters/ParameterNew";
 import ParameterDelete from "./components/Parameters/ParameterDelete";
 
+//ClinicalInformation
+import ClinicalInformationList from "./components/ClinicalInformations/ClinicalInformationList";
+import ClinicalInformationEdit from "./components/ClinicalInformations/ClinicalInformationEdit";
+import ClinicalInformationNew from "./components/ClinicalInformations/ClinicalInformationNew";
+import ClinicalInformationDelete from "./components/ClinicalInformations/ClinicalInformationDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -142,6 +147,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/parameters-edit/:id" component={ParameterEdit} />
                   <SecureRoute exact path="/parameters-delete/:id" component={ParameterDelete} />
                   <SecureRoute exact path="/parameters-new" component={ParameterNew} />
+                  <SecureRoute exact path="/clinicalInformations-list" component={ClinicalInformationList} />
+                  <SecureRoute exact path="/clinicalInformations-edit/:id" component={ClinicalInformationEdit} />
+                  <SecureRoute exact path="/clinicalInformations-delete/:id" component={ClinicalInformationDelete} />
+                  <SecureRoute exact path="/clinicalInformations-new" component={ClinicalInformationNew} />
 
                 </Switch >
               </Router >
