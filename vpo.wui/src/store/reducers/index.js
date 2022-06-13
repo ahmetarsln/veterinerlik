@@ -13,6 +13,7 @@ import currencyUnitReducer from "./currencyUnitReducer";
 import paymentReducer from "./paymentReducer";
 import petAnalysisReducer from "./petAnalysisReducer";
 import parameterReducer from "./parameterReducer";
+import taxRateReducer from "./taxRateReducer";
 
 const rootReducer = combineReducers({
   userReducer,
@@ -30,6 +31,7 @@ const rootReducer = combineReducers({
   paymentReducer,
   petAnalysisReducer,
   parameterReducer,
+  taxRateReducer,
 
 });
 
