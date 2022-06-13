@@ -16,6 +16,7 @@ const NavMenu = () => {
             <Nav.Link href="/suppliers-list">Firmalar</Nav.Link>
             <Nav.Link href="/payments-list">Ödemeler</Nav.Link>
             <Nav.Link href="/parameters-list">Parametreler</Nav.Link>
+            <Nav.Link href="/putatives-list">Varsayılan</Nav.Link>
 
 
             <Nav.Link
