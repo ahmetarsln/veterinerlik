@@ -35,6 +35,9 @@ namespace murphy.vpo.DAL.Concrete.EntityFramework
         public DbSet<Parameter> Parameters { get; set; }
         public DbSet<ClinicalInformation> ClinicalInformations { get; set; }
         public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<Analysis> Analysis { get; set; }
+        public DbSet<PetAnalysis> PetAnalysis { get; set; }
+        public DbSet<TaxRate> TaxRates { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
         public VpoDbContext(DbContextOptions<VpoDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)
