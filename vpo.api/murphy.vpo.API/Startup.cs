@@ -90,6 +90,9 @@ namespace murphy.vpo.API
             services.AddScoped<IAppointmentDal, EfAppointmentDal>();
             services.AddScoped<IAppointmentService, AppointmentManager>();
 
+            services.AddScoped<IInvoiceDal, EfInvoiceDal>();
+            services.AddScoped<IInvoiceService, InvoiceManager>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
