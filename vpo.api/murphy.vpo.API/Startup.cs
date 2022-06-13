@@ -85,6 +85,9 @@ namespace murphy.vpo.API
             services.AddScoped<IInvoiceDal, EfInvoiceDal>();
             services.AddScoped<IInvoiceService, InvoiceManager>();
 
+            services.AddScoped<IReportDal, EfReportDal>();
+            services.AddScoped<IReportService, ReportManager>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
