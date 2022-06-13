@@ -38,6 +38,11 @@ import ParameterList from "./components/Parameters/ParameterList";
 import ParameterEdit from "./components/Parameters/ParameterEdit";
 import ParameterNew from "./components/Parameters/ParameterNew";
 import ParameterDelete from "./components/Parameters/ParameterDelete";
+//Payment
+import PutativeList from "./components/Putatives/PutativeList";
+import PutativeEdit from "./components/Putatives/PutativeEdit";
+import PutativeNew from "./components/Putatives/PutativeNew";
+import PutativeDelete from "./components/Putatives/PutativeDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -83,6 +88,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/parameters-edit/:id" component={ParameterEdit} />
                   <SecureRoute exact path="/parameters-delete/:id" component={ParameterDelete} />
                   <SecureRoute exact path="/parameters-new" component={ParameterNew} />
+                  <SecureRoute exact path="/putatives-list" component={PutativeList} />
+                  <SecureRoute exact path="/putatives-edit/:id" component={PutativeEdit} />
+                  <SecureRoute exact path="/putatives-delete/:id" component={PutativeDelete} />
+                  <SecureRoute exact path="/putatives-new" component={PutativeNew} />
 
                 </Switch>
               </Router>
