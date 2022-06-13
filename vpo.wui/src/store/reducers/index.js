@@ -7,6 +7,7 @@ import customerReducer from "./customerReducer";
 import supplierReducer from "./supplierReducer";
 import paymentReducer from "./paymentReducer";
 import parameterReducer from "./parameterReducer";
+import putativeReducer from "./putativeReducer";
 
 const rootReducer = combineReducers({
   userReducer,
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   supplierReducer,
   paymentReducer,
   parameterReducer,
+  putativeReducer
 
 });
 
