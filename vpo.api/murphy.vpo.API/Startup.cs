@@ -95,7 +95,6 @@ namespace murphy.vpo.API
             services.AddScoped<IAnalysisService, AnalysisManager>();
             services.AddScoped<IPutativeDal, EfPutativeDal>();
             services.AddScoped<IPutativeService, PutativeManager>();
-
             services.AddScoped<IReportDal, EfReportDal>();
             services.AddScoped<IReportService, ReportManager>();
 
