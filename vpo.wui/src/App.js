@@ -84,6 +84,11 @@ import PutativeList from "./components/Putatives/PutativeList";
 import PutativeEdit from "./components/Putatives/PutativeEdit";
 import PutativeNew from "./components/Putatives/PutativeNew";
 import PutativeDelete from "./components/Putatives/PutativeDelete";
+//Invoice
+import InvoiceList from "./components/Invoices/InvoiceList";
+import InvoiceEdit from "./components/Invoices/InvoiceEdit";
+import InvoiceNew from "./components/Invoices/InvoiceNew";
+import InvoiceDelete from "./components/Invoices/InvoiceDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -160,12 +165,15 @@ class App extends PureComponent {
                   <SecureRoute exact path="/putatives-edit/:id" component={PutativeEdit} />
                   <SecureRoute exact path="/putatives-delete/:id" component={PutativeDelete} />
                   <SecureRoute exact path="/putatives-new" component={PutativeNew} />
-
-                </Switch >
-              </Router >
-            </ModalManager >
-          </Provider >
-        </Layout >
+                  <SecureRoute exact path="/invoices-list" component={InvoiceList} />
+                  <SecureRoute exact path="/invoices-edit/:id" component={InvoiceEdit} />
+                  <SecureRoute exact path="/invoices-delete/:id" component={InvoiceDelete} />
+                  <SecureRoute exact path="/invoices-new" component={InvoiceNew} />
+                </Switch>
+              </Router>
+            </ModalManager>
+          </Provider>
+        </Layout>
       </>
     );
   }

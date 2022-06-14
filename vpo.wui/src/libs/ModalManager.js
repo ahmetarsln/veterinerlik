@@ -40,6 +40,9 @@ import PutativeDeleteModal from "../components/Putatives/PutativeModals/Putative
 import ClinicalInformationNewModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationNewModal";
 import ClinicalInformationEditModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationEditModal";
 import ClinicalInformationDeleteModal from "../components/ClinicalInformations/ClinicalInformationModals/ClinicalInformationDeleteModal";
+import InvoiceNewModal from "../components/Invoices/InvoiceModals/InvoiceNewModal";
+import InvoiceEditModal from "../components/Invoices/InvoiceModals/InvoiceEditModal";
+import InvoiceDeleteModal from "../components/Invoices/InvoiceModals/InvoiceDeleteModal";
 const ModalManager = () => {
   const modalLookup = {
     UserNewModal,
@@ -79,7 +82,10 @@ const ModalManager = () => {
     ClinicalInformationDeleteModal,
     PutativeNewModal,
     PutativeEditModal,
-    PutativeDeleteModal
+    PutativeDeleteModal,
+    InvoiceNewModal,
+    InvoiceEditModal,
+    InvoiceDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;

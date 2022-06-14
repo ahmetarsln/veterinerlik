@@ -24,7 +24,7 @@ const NavMenu = () => {
             <Nav.Link href="/parameters-list">Parametreler</Nav.Link>
             <Nav.Link href="/clinicalInformations-list">Klinik Bilgileri</Nav.Link>
             <Nav.Link href="/putatives-list">Varsayılan</Nav.Link>
-
+            <Nav.Link href="/invoices-list">Fatura </Nav.Link>
 
             <Nav.Link
               href="/login"
