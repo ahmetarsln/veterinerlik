@@ -14,7 +14,11 @@ import paymentReducer from "./paymentReducer";
 import petAnalysisReducer from "./petAnalysisReducer";
 import parameterReducer from "./parameterReducer";
 import measurementUnitReducer from "./measurementUnitReducer";
-import clinicalInformation from "./clinicalInformationReducer";
+import putativeReducer from "./putativeReducer";
+import clinicalInformationReducer from "./clinicalInformationReducer";
+import invoiceReducer from "./invoiceReducer";
+import taxRateReducer from "./taxRateReducer";
+import analysisReducer from "./analysisReducer";
 
 const rootReducer = combineReducers({
   userReducer,
@@ -33,7 +37,12 @@ const rootReducer = combineReducers({
   petAnalysisReducer,
   parameterReducer,
   measurementUnitReducer,
-  clinicalInformation,
+  putativeReducer,
+  clinicalInformationReducer,
+  invoiceReducer,
+  taxRateReducer,
+  analysisReducer,
+
 });
 
 export default rootReducer;
