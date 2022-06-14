@@ -18,7 +18,8 @@ const NavMenu = () => {
             <Nav.Link href="/currencyUnits-list">Para Birimleri</Nav.Link>
             <Nav.Link href="/measurementUnits-list">Ölçü Birimleri</Nav.Link>
             <Nav.Link href="/clinicalInformations-list">Klinik Bilgileri</Nav.Link>
-            <Nav.Link href="/invoices-list">Fatura </Nav.Link>
+            <Nav.Link href="/invoices-list">Faturalar </Nav.Link>
+            <Nav.Link href="/reports-list">Raporlar </Nav.Link>
 
             <Nav.Link
               href="/login"
