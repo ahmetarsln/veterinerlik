@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using murphy.vpo.DAL.Concrete.EntityFramework;
 
 namespace murphy.vpo.API.Migrations
 {
     [DbContext(typeof(VpoDbContext))]
-    partial class VpoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220614010106_Forgetpassword added")]
+    partial class Forgetpasswordadded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
