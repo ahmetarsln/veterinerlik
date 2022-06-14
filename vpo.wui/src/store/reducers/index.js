@@ -17,6 +17,7 @@ import measurementUnitReducer from "./measurementUnitReducer";
 import putativeReducer from "./putativeReducer";
 import clinicalInformationReducer from "./clinicalInformationReducer";
 import invoiceReducer from "./invoiceReducer";
+import taxRateReducer from "./taxRateReducer";
 
 const rootReducer = combineReducers({
   userReducer,
@@ -38,6 +39,8 @@ const rootReducer = combineReducers({
   putativeReducer,
   clinicalInformationReducer,
   invoiceReducer,
+  taxRateReducer,
+
 });
 
 export default rootReducer;
