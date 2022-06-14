@@ -30,6 +30,7 @@ namespace murphy.vpo.API.Helpers
         CreateMap<ClinicalInformation, ClinicalInformationDto>().ReverseMap();
         CreateMap<TaxRate, TaxRateDto>().ReverseMap();
         CreateMap<Invoice, InvoiceDto>().ReverseMap();
+        CreateMap<Putative, PutativeDto>().ReverseMap();
         }
     }
 }

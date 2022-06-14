@@ -89,9 +89,12 @@ namespace murphy.vpo.API
             services.AddScoped<IClinicalInformationService, ClinicalInformationManager>();
             services.AddScoped<IAppointmentDal, EfAppointmentDal>();
             services.AddScoped<IAppointmentService, AppointmentManager>();
-
             services.AddScoped<IInvoiceDal, EfInvoiceDal>();
             services.AddScoped<IInvoiceService, InvoiceManager>();
+            services.AddScoped<IAnalysisDal, EfAnalysisDal>();
+            services.AddScoped<IAnalysisService, AnalysisManager>();
+            services.AddScoped<IPutativeDal, EfPutativeDal>();
+            services.AddScoped<IPutativeService, PutativeManager>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>

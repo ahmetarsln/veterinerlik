@@ -79,6 +79,11 @@ import ClinicalInformationList from "./components/ClinicalInformations/ClinicalI
 import ClinicalInformationEdit from "./components/ClinicalInformations/ClinicalInformationEdit";
 import ClinicalInformationNew from "./components/ClinicalInformations/ClinicalInformationNew";
 import ClinicalInformationDelete from "./components/ClinicalInformations/ClinicalInformationDelete";
+//Payment
+import PutativeList from "./components/Putatives/PutativeList";
+import PutativeEdit from "./components/Putatives/PutativeEdit";
+import PutativeNew from "./components/Putatives/PutativeNew";
+import PutativeDelete from "./components/Putatives/PutativeDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -151,6 +156,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/clinicalInformations-edit/:id" component={ClinicalInformationEdit} />
                   <SecureRoute exact path="/clinicalInformations-delete/:id" component={ClinicalInformationDelete} />
                   <SecureRoute exact path="/clinicalInformations-new" component={ClinicalInformationNew} />
+                  <SecureRoute exact path="/putatives-list" component={PutativeList} />
+                  <SecureRoute exact path="/putatives-edit/:id" component={PutativeEdit} />
+                  <SecureRoute exact path="/putatives-delete/:id" component={PutativeDelete} />
+                  <SecureRoute exact path="/putatives-new" component={PutativeNew} />
 
                 </Switch >
               </Router >

@@ -23,6 +23,8 @@ const NavMenu = () => {
             <Nav.Link href="/pet-analysis-list">Pet Tahlil</Nav.Link>
             <Nav.Link href="/parameters-list">Parametreler</Nav.Link>
             <Nav.Link href="/clinicalInformations-list">Klinik Bilgileri</Nav.Link>
+            <Nav.Link href="/putatives-list">Varsayılan</Nav.Link>
+
 
             <Nav.Link
               href="/login"

@@ -15,6 +15,7 @@ import petAnalysisReducer from "./petAnalysisReducer";
 import parameterReducer from "./parameterReducer";
 import measurementUnitReducer from "./measurementUnitReducer";
 import clinicalInformation from "./clinicalInformationReducer";
+import putativeReducer from "./putativeReducer";
 
 const rootReducer = combineReducers({
   userReducer,
@@ -34,6 +35,8 @@ const rootReducer = combineReducers({
   parameterReducer,
   measurementUnitReducer,
   clinicalInformation,
+  putativeReducer,
+
 });
 
 export default rootReducer;
