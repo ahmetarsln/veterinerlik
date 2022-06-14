@@ -52,6 +52,11 @@ import InvoiceList from "./components/Invoices/InvoiceList";
 import InvoiceEdit from "./components/Invoices/InvoiceEdit";
 import InvoiceNew from "./components/Invoices/InvoiceNew";
 import InvoiceDelete from "./components/Invoices/InvoiceDelete";
+//Report
+import ReportList from "./components/Reports/ReportList";
+import ReportEdit from "./components/Reports/ReportEdit";
+import ReportNew from "./components/Reports/ReportNew";
+import ReportDelete from "./components/Reports/ReportDelete";
 //Modal
 import ModalManager from "./libs/ModalManager";
 import Login from "./components/Auth/Login";
@@ -108,6 +113,10 @@ class App extends PureComponent {
                   <SecureRoute exact path="/invoices-edit/:id" component={InvoiceEdit} />
                   <SecureRoute exact path="/invoices-delete/:id" component={InvoiceDelete} />
                   <SecureRoute exact path="/invoices-new" component={InvoiceNew} />
+                  <SecureRoute exact path="/reports-list" component={ReportList} />
+                  <SecureRoute exact path="/reports-edit/:id" component={ReportEdit} />
+                  <SecureRoute exact path="/reports-delete/:id" component={ReportDelete} />
+                  <SecureRoute exact path="/reports-new" component={PetNew} />
                 </Switch>
               </Router>
             </ModalManager>
