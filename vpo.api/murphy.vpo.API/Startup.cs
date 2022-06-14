@@ -77,6 +77,8 @@ namespace murphy.vpo.API
             services.AddScoped<IParameterService, ParameterManager>();
             services.AddScoped<IPutativeDal, EfPutativeDal>();
             services.AddScoped<IPutativeService, PutativeManager>();
+            services.AddScoped<IForgetpasswordDal, EfForgetpasswordDal>();
+            services.AddScoped<IForgetpasswordService, ForgetpasswordManager>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
