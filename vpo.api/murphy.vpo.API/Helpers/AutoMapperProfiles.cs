@@ -31,6 +31,7 @@ namespace murphy.vpo.API.Helpers
         CreateMap<TaxRate, TaxRateDto>().ReverseMap();
         CreateMap<Invoice, InvoiceDto>().ReverseMap();
         CreateMap<Putative, PutativeDto>().ReverseMap();
+        CreateMap<Report, ReportDto>().ReverseMap();
         }
     }
 }

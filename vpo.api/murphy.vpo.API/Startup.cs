@@ -96,6 +96,9 @@ namespace murphy.vpo.API
             services.AddScoped<IPutativeDal, EfPutativeDal>();
             services.AddScoped<IPutativeService, PutativeManager>();
 
+            services.AddScoped<IReportDal, EfReportDal>();
+            services.AddScoped<IReportService, ReportManager>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
