@@ -384,25 +384,33 @@ namespace murphy.vpo.API.Migrations
                     b.ToTable("Pets");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.PetAnalysis", b =>
+=======
+            modelBuilder.Entity("murphy.vpo.Entity.Concrete.Putative", b =>
+>>>>>>> v0.0.26
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+<<<<<<< HEAD
                     b.Property<DateTime>("AnalysisDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("AnalysisStatement")
                         .HasColumnType("nvarchar(max)");
 
+=======
+>>>>>>> v0.0.26
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
+<<<<<<< HEAD
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -493,6 +501,7 @@ namespace murphy.vpo.API.Migrations
 
                     b.Property<string>("Language")
                         .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 
@@ -506,6 +515,7 @@ namespace murphy.vpo.API.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
                 b.ToTable("Putatives");
 
             });
@@ -538,6 +548,7 @@ namespace murphy.vpo.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ProductCategories");
+
                 });
 
             modelBuilder.Entity("murphy.vpo.Entity.Concrete.Role", b =>
