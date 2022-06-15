@@ -24,8 +24,22 @@ namespace murphy.vpo.DAL.Concrete.EntityFramework
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
-
         public DbSet<Pet> Pets { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<CurrencyUnit> CurrencyUnits { get; set; }
+        public DbSet<Payment> Payments { get; set; }
+        public DbSet<MeasurementUnit> MeasurementUnits { get; set; }
+        public DbSet<Parameter> Parameters { get; set; }
+        public DbSet<ClinicalInformation> ClinicalInformations { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<Analysis> Analysis { get; set; }
+        public DbSet<PetAnalysis> PetAnalysis { get; set; }
+        public DbSet<TaxRate> TaxRates { get; set; }
+        public DbSet<Putative> Putatives { get; set; }
+        public DbSet<Report> Reports { get; set; }
 
         private readonly IHttpContextAccessor _httpContextAccessor;
         public VpoDbContext(DbContextOptions<VpoDbContext> options, IHttpContextAccessor httpContextAccessor) : base(options)

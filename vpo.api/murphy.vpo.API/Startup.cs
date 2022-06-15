@@ -66,6 +66,37 @@ namespace murphy.vpo.API
             services.AddScoped<IUserRoleService, UserRoleManager>();
             services.AddScoped<IUserRoleDal, EfUserRoleDal>();
             services.AddScoped<IPetDal, EfPetDal>();
+            services.AddScoped<IPetService, PetManager>();
+            services.AddScoped<ICustomerDal, EfCustomerDal>();
+            services.AddScoped<ICustomerService, CustomerManager>();
+            services.AddScoped<IProductDal, EfProductDal>();
+            services.AddScoped<ISupplierDal, EfSupplierDal>();
+            services.AddScoped<ISupplierService, SupplierManager>();
+            services.AddScoped<IProductCategoryDal, EfProductCategoryDal>();
+            services.AddScoped<IProductCategoryService, ProductCategoryManager>();
+            services.AddScoped<ICurrencyUnitDal, EfCurrencyUnitDal>();
+            services.AddScoped<ICurrencyUnitService, CurrencyUnitManager > ();
+            services.AddScoped<ISupplierService, SupplierManager>();    
+            services.AddScoped<IPaymentDal, EfPaymentDal>();
+            services.AddScoped<IPaymentService, PaymentManager>();
+            services.AddScoped<IMeasurementUnitDal, EfMeasurementUnitDal>();
+            services.AddScoped<IMeasurementUnitService, MeasurementUnitManager>();
+            services.AddScoped<IPetAnalysisDal, EfPetAnalysisDal>();
+            services.AddScoped<IPetAnalysisService, PetAnalysisManager>();
+            services.AddScoped<IParameterDal, EfParameterDal>();
+            services.AddScoped<IParameterService, ParameterManager>();
+            services.AddScoped<IClinicalInformationDal, EfClinicalInformationDal>();
+            services.AddScoped<IClinicalInformationService, ClinicalInformationManager>();
+            services.AddScoped<IAppointmentDal, EfAppointmentDal>();
+            services.AddScoped<IAppointmentService, AppointmentManager>();
+            services.AddScoped<IInvoiceDal, EfInvoiceDal>();
+            services.AddScoped<IInvoiceService, InvoiceManager>();
+            services.AddScoped<IAnalysisDal, EfAnalysisDal>();
+            services.AddScoped<IAnalysisService, AnalysisManager>();
+            services.AddScoped<IPutativeDal, EfPutativeDal>();
+            services.AddScoped<IPutativeService, PutativeManager>();
+            services.AddScoped<IReportDal, EfReportDal>();
+            services.AddScoped<IReportService, ReportManager>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
