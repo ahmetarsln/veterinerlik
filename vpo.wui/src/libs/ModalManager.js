@@ -43,6 +43,9 @@ import ClinicalInformationDeleteModal from "../components/ClinicalInformations/C
 import InvoiceNewModal from "../components/Invoices/InvoiceModals/InvoiceNewModal";
 import InvoiceEditModal from "../components/Invoices/InvoiceModals/InvoiceEditModal";
 import InvoiceDeleteModal from "../components/Invoices/InvoiceModals/InvoiceDeleteModal";
+import ReportNewModal from "../components/Reports/ReportModals/ReportNewModal";
+import ReportEditModal from "../components/Reports/ReportModals/ReportEditModal";
+import ReportDeleteModal from "../components/Reports/ReportModals/ReportDeleteModal";
 const ModalManager = () => {
   const modalLookup = {
     UserNewModal,
@@ -86,6 +89,9 @@ const ModalManager = () => {
     InvoiceNewModal,
     InvoiceEditModal,
     InvoiceDeleteModal,
+    ReportNewModal,
+    ReportEditModal,
+    ReportDeleteModal,
   };
   const currentModal = useSelector((state) => state.modalReducer);
   let renderedModal;
