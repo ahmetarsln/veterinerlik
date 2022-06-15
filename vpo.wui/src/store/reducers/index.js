@@ -10,6 +10,7 @@ import currencyUnitReducer from "./currencyUnitReducer";
 import measurementUnitReducer from "./measurementUnitReducer";
 import clinicalInformationReducer from "./clinicalInformationReducer";
 import invoiceReducer from "./invoiceReducer";
+import reportReducer from "./reportREducer";
 
 const rootReducer = combineReducers({
   userReducer,
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   measurementUnitReducer,
   clinicalInformationReducer,
   invoiceReducer,
+  reportReducer,
 });
 
 export default rootReducer;
